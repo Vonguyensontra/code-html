@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục tài sản</title>
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- BS4 CSS ctrl + / -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="css/dg1.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+<header>
+    <div class="container1">
+        <!-- Tabar -->
+        <div class="tabar">
+            <div class="minitabar">
+                <div class="socialnetwork col-4">
+
+                    <p class="text mr-4 margin textcolor ">Theo dõi chúng tôi:</p>
+                    <a href="" class="margin iconcolor hovericon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="margin iconcolor hovericon"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="margin iconcolor hovericon"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="" class="margin iconcolor hovericon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="thetrang col-6 "></div>
+                <div class="login">
+                    <a href="dangnhap.html" class="mr-4 textcolor hover"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng
+                        nhập</a>
+                    <a href="DangKi.html" class="mr-0 pr-0 textcolor hover"><i
+                            class="fas fa-user-plus iconcolor mr-2"></i>Đăng kí</a>
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+        <div class="header">
+        <div class="row">
+            
+                <!-- row Logo and Tìm kiếm -->
+                <!-- <div class="row row-logo"> -->
+                    <div class="logo col-4">
+                        <!-- <img class="logo" src="img/logo.png" alt=""> -->
+                        <a href="danhmuc.html" target=""> 
+                            <img src="img/logo.png" alt="" class="logo"/> </a>
+                    </div>
+                    <div class="search col-6">
+
+                        <form action="" method="get" class="minisearch ">
+                            <select name="" id="" class="list">
+                                <option value="">Danh Mục Tài Sản</option>
+                                <option value="">Danh Mục Tài Sản</option>
+                                <option value="">Danh Mục Tài Sản</option>
+                                <option value="">Danh Mục Tài Sản</option>
+                                <option value="">Danh Mục Tài Sản</option>
+                            </select>
+                        </form>
+                        <div class="form-group input ">
+
+                            <input style="border:none;box-shadow: none !important;background-color: 	#DDDDDD;"
+                                type="text" class="form-control" name="" id="" placeholder="Nhập tên sp">
+                        </div>
+                        <div class="iconsearch">
+                            <a href=""><i class="fas fa-search"></i></a>
+                        </div>
+
+                    </div>
+                <!-- </div> -->
+            </div> 
+                <!-- Menu Danh mục - Trang chủ - Đấu giá - Liên hệ bán -->
+                <div class="bgmenubar">
+                    <div class="menubar">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn"><svg class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản phẩm</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                    <!-- Link S/p -->
+                            <a href="#"><i class="fas fa-university mr-2"></i>Tài sản công</a>
+                              <a href="#"><i class="fas fa-home mr-2"></i>Bất động sản</a>
+                              <a href="#"><i class="fas fa-car mr-2"></i>Xe cộ</a>
+                              <a href="#"><i class="fas fa-image mr-2"></i>Nghệ thuật</a>
+                              <a href="#"><i class="far fa-gem mr-2"></i>Hàng hiệu xa xỉ</a>
+                              <a href="#"><i class="fas fa-plus mr-2"></i>Tài sản khác</a>
+                            </div>
+                        </div>
+                          <nav class="nav justify-content link1">
+                            <a class="nav-link linknav" href="danhmuc.html">Trang chủ</a>
+                            
+                            <div class="dropdown">
+                                <button class="dropbtn1">Cuộc đấu giá</button>
+                                <div class="dropdown-content">
+                                  <a href="DanhMucSanPham.html">Cuộc đấu giá sắp đấu giá</a>
+                                  <a href="#">Cuộc đấu giá đang diễn ra</a>
+                                  <a href="#">Cuộc đấu giá đã kết thúc</a>
+                                </div>
+                            </div>
+                            <a class="nav-link linknav" href="LienHeBanDauGia.html">Liên hệ bán đấu giá</a>
+                                                
+                          </nav>
+                          <div class="contactous">
+                            <div class="email">
+                                <a href=""><i class="fas fa-envelope-open iconemail"></i></a>
+                                <p class="textemail mt-2">Email:</p>
+                                <h6 class="textemail " style="margin-top: 2px;">codedream@gmail.com</h6>
+                            </div>
+                            <div class="phone">
+                                <a href=""><i class="fas fa-phone-alt iconemail"></i></i></a>
+                                <p class="textemail">Phone:</p>
+                                <h6 class="textemail" style="margin-top: 2px;">+84 123 456 789</h6>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </header>
+        <!-- Phần tìm kiếm và sản phẩm đấu giá -->
+    <div class="container2">
+        <!-- Trang chủ/danh mục chọn -->
+        <div class="row row1">
+
+        </div>
+        <!-- Row tìm kiếm và sản phẩm  -->
+        <div class="row row2">
+            <!--Col tìm kiếm  -->
+            <div class="col-2 bg-cl-r left">
+                <form action="">
+                    <div class="form-group form-timkiem">
+                      <label class="screen-reader-text" for="woocomer-"></label>
+                      <input type="text"  class="form-control" name="Tìm kiếm" placeholder="Tìm kiếm">
+                      <small id="usError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group form-chonmuc ">
+                        <label class= "label-tk" for="">Lọc mục sản phẩm:</label>
+                        <select class="form-control form-tk" name="" id="">
+                          <option value="#">Phương tiện - xe cộ</option>
+                          <option value="#">Bất động sản</option>
+                          <option value="#">Đồ nghệ thuật</option>
+                          <option value="#">#</option>
+                          <option value="#">#</option>
+                          <option value="#">#</option>
+                        </select>
+                        <small id="SelectAvatarError" class="text-danger"></small>
+                      </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-gia" name="" id="">
+                            <option value="thapnhat">Giá thấp nhất</option>
+                            <option value="caonhat">Giá cao nhất</option>
+                        </select>
+                        <small id="SelectAvatarError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control form-thoigian" name="" id="">
+                            <option value="moinhat">Mới nhất</option>
+                            <option value="cuhon">Cũ hơn</option>
+                        </select>
+                        <small id="SelectAvatarError" class="text-danger"></small>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="btn-bg" class="btn">Lọc</button>
+                    </div>
+                    
+                    <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
+                        <h3 class="widget-title" style="margin-top: 100px;">Danh mục tài sản</h3>
+                        <ul class="product-categories">
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Tài sản công</a><span style="margin-left:20px;">(<span>x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Bất động sản</a><span style="margin-left:20px;">(<span >x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="DanhMucSanPham.html">Phương tiện - xe cộ</a><span style="margin-left:20px;">(<span >x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Sưu tầm - nghệ thuật</a><span style="margin-left:20px;">(<span >x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Hàng hiệu xa xỉ</a><span style="margin-left:20px;">(<span>x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Tang vật vi phạm</a><span style="margin-left:20px;">(<span >x</span>)</span></li>
+                                    <li class="cat-item cat-item-114"><a id="title" href="#">Tài sản khác</a><span style="margin-left:20px;">(<span >x</span>)</span></li>
+                        </ul>
+                    </aside>
+                </form>
+                
+                
+   
+            </div>
+            <!--Col sản phẩm  -->
+            <div class="col-8 bg-cl-c">
+                <div class="row row-img">
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row row-img">
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a> -->
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!-- <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- <div class="row row-img">
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="images/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="images/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="images/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-3 col-img">
+                        <div class="pic-area">
+                            <img src="images/xe.jpg" class="img-fluid picture" alt="">
+                        </div>
+                        <a style="font-size: 16px;" class="ellipsis2" href="#">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
+                        </a>
+                        <div class="details-container">
+                            <div class="details-price-container details-item">
+                                Ngày mở :
+                                <span class="price">
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                </span>
+                                <div class="details-review-container details-item"></div><div class="bottom-components">
+                                    <div class="component add-to-cart" style="display:none">
+                                        <a href="#" data-quantity="1" data-tooltip="Bid Now" class="button product_type_simple add_to_cart_button" data-product_id="4679" data-product_sku="BF004" aria-label="Read more about “Villa Lima Street”" rel="nofollow"><i class="fa fa-gavel"></i></a>
+                                    </div>
+                                    <div class="component wishlist">
+                                        <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
+                                            <div class="yith-wcwl-add-button show" style="display:block">
+
+                                                <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                <a href="#" data-tooltip="Check Wishlist" class="button">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                            </div>
+
+                                            <div style="clear:both"></div>
+                                            <div class="yith-wcwl-wishlistaddresponse"></div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="component quick-view">
+                                        <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> -->
+                <div class="center">
+                    <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">&raquo;</a>
+                    </div>
+                  </div>
+            </div>
+            <!-- Col quảng cáo google -->
+            <div class="col-2 bg-cl-l">
+            </div>
+        </div>
+        <div class="row row3">
+            <footer>
+
+                <div class="container">
+                    <!--Bắt Đầu Nội Dung Giới Thiệu-->
+                    <div class="noi-dung about">
+                        <h2>Về Chúng Tôi</h2>
+                        <p>Lorem ipsumdolor sit...</p>
+                        <ul class="social-icon">
+                            <li><a href=""><i class="fab fa-facebook-f text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-google-plus-g text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube text-white"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Giới Thiệu-->
+                    <!--Bắt Đầu Nội Dung Đường Dẫn-->
+                    <div class="noi-dung links">
+                        <h2>Đường Dẫn</h2>
+                        <ul>
+                            <li><a href="#">Trang Chủ</a></li>
+                            <li><a href="#">Liên hệ bán hàng</a></li>
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Đường Dẫn-->
+                    <!--Bắt Đâu Nội Dung Liên Hệ-->
+                    <div class="noi-dung contact">
+                        <h2>Thông Tin Liên Hệ</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fa fa-map-marker"></i></span>
+                                <span>Nam Kì Khởi Nghĩa<br />
+                                    Fsoft, Thành Phố Đà Nẵng<br />
+                                    Việt Nam</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-phone"></i></span>
+                                <p><a href="#">+84 123 456 789</a>
+                                    <br />
+                                    <a href="#">+84 987 654 321</a>
+                                </p>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope"></i></span>
+                                <p><a href="#">codedream@gmail.com</a></p>
+                            </li>
+        
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Liên Hệ-->
+                </div>
+                
+        
+            </footer>
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+
+
+    <!-- JS funtions -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+    <!-- BS4 JS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/header.js"></script>
+    <!-- My JS -->
+</body>
+</html>
