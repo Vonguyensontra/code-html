@@ -15,6 +15,7 @@ int main(){
 		{
 			if (s[i]==' ')
 			{
+			//aaaaaaaaaaaaaaaaa
 				s[i]='\0';
 				printf("%s ",&s[i]+1);
 			}
