@@ -160,3 +160,56 @@ element.style {
     color: black;
     border: 1px solid lightgray;
 }
+.row-link{
+    /* background-color: #0056b3; */
+    width: auto;
+    height: 20px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.breadcrumb {
+    background: transparent;
+    margin-bottom: 0px;
+    padding-right: 0;
+    color: #999999 ;
+}
+.breadcrumb li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+
+}
+.breadcrumb li a{
+    color: #999999 ;
+}
+.label-tk{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    margin: 0 0 12px;
+    position: relative;
+    padding: 0 0 12px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.productname-style{
+    padding-left: 10px;
+    background: #fff;
+}
+.row-number-partic{
+    padding-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 1rem;
+}
+.row-number-partic1{
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
