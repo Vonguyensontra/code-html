@@ -15,3 +15,8 @@ function myFunction() {
       }
     }
   }
+
+  window.addEventListener("scroll",function(){
+    var bgmenubar =document.querySelector("bgmenubar");
+    bgmenubar.classList.toggle("sticky",window.scrollY>0);
+  })
