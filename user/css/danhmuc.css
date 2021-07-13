@@ -22,14 +22,14 @@
     padding: 15px 25px;
     border-radius: 38%;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 .nav_customer{
-    margin: 50px;
+  
     height: 700px;
     width: 1400px;
     margin-top: -200px;
-    margin-left: 6%;
+    margin-left: 50px;
     
 }
  .left_customer{
@@ -40,8 +40,10 @@
     
 }
 .top_customer1 img{
+    
     width: 330px;
     height: 100%;
+    
     z-index: -1;
 }
 .bottom_customer1 img{
@@ -104,44 +106,38 @@
 }
 .masonry_holder{
    display: block;
-    top: 350px;
-    left: 120px;
+   top: 50%;
     position: absolute;
     z-index: 0;
 }
 .masonry_holder2{   
     display: block;
-    position: absolute;
-    left: 500px;
-    top: 350px;
+    position: absolute;   
+    top: 50%;
     z-index: 0;
 }
 .masonry_holder3{
     margin: 30px;
-    position: absolute;
-    bottom: -160px;
-    left: 300px;
+    position: absolute;   
+    top: 90%;
     z-index: 0;
 }
 .masonry_holder4{
     margin: 30px;
     position: absolute;
-    bottom: 140px;
-    left: 1000px;
+    top: 50%;
     z-index: 0;
 }
 .masonry_holder5{
     margin: 30px;
     position: absolute;
-    bottom: -250px;
-    left: 800px;
+    top: 110%;
     z-index: 0;
 }
 .masonry_holder6{
     margin: 30px;
     position: absolute;
-    bottom: -250px;
-    left: 1160px;
+    top: 110%;
     z-index: 0;
 }
 .category_item{
@@ -291,70 +287,58 @@ a:focus, a::before, a:hover{
 }
 
 .content_title1{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 1150px;
-    left: 150px;
+    top: 158%;
 }
 .content_title2{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 1650px;
-    left: 150px;
+    top: 220%;
 }
 .content_title3{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 2050px;
-    left: 150px;
+    top: 282%;
 }
 .content_title4{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 2550px;
-    left: 150px;
+    top: 344%;
 }
 .content_title5{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 2950px;
-    left: 150px;
+    top: 406%;
 }
 .content_title6{
-    
+    margin: 30px;
     width: 400px;
     height: 500px;
     
     z-index: 0;
     position: absolute;
-    
-    top: 3450px;
-    left: 150px;
+    top: 468%;
 }
 .title_content_first{
     float: left;
@@ -406,10 +390,6 @@ body {
     height: 250px;
     
 
-}
-
-.container-fluid{
-    margin-top: -200px;
 }
 .minitabar{
     margin: auto;
@@ -477,9 +457,6 @@ body {
     margin-top: 35px;
     
 }
-/* .search1{
-    margin-top: 20px;
-} */
 .input{
     width: 380px;
     height: 100%;
