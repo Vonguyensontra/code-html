@@ -204,12 +204,15 @@ a {
     padding-left: 10px;
     background: #fff;
 }
-.row-number-partic{
+.row-number-partic {
     padding-left: 10px;
     margin-bottom: 2px;
-    margin-top: 1rem;
+    margin-top: 5px;
 }
 .row-number-partic1{
     padding-left: 10px;
     margin-bottom: 2px;
+}
+.row-number-partic p{
+    margin-bottom: 0;
 }
