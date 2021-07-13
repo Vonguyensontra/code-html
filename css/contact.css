@@ -1,8 +1,6 @@
 body{
     margin:0;
-    /* font-size: 20px; */
     background-color: #fafafa;
-    /* font-family: 'Ubuntu', sans-serif;; */
 }
 .bg{
     background-color: #efefef;
@@ -11,15 +9,12 @@ body{
     width: auto;
     height: auto;
     margin: 0 auto;
-    /* border: tan 1px solid;
-    border-radius: 5px; */
     padding: 0.5rem;
     background-color: white;
 }
 
 #btn{
     color: #fff;
-    /* line-height: 1; */
     border-radius: 30px;
     background-color: #f7921a;
     color: white;
@@ -54,6 +49,9 @@ body{
         padding-top: 120px;
         
     }
+    footer{
+        margin-top: 5%;
+    }
 }
 
 @media only screen and (min-width: 1500px)  {
@@ -61,7 +59,7 @@ body{
         padding-top: 60px !important;
         padding-right: 30px;
         padding-bottom: 85px;
-        padding-left: 160px;
+        padding-left: 300px;
         
     }
 
@@ -69,8 +67,8 @@ body{
     display: block;
     position: absolute;
     background-color: #f7921a;
-    height: 400px;
-    width: 270px;
+    height: 54%;
+    width: 22%;
     margin-top: -495px;
     margin-left: 100px;
     }
