@@ -130,9 +130,86 @@
     </header>
     <!-- Phần tìm kiếm và sản phẩm đấu giá -->
     <div class="container2">
-        <!-- Col sản phẩm liên quan -->
+        <div class="row row2">
+            <!-- Col sản phẩm liên quan -->
         <div class="col-2 bg-cl-r left">
 
+        </div>
+        <!-- Chi tiết sản phẩm - Thông tin đấu giá -->
+        <div class="col-8 bg-cl-c">
+            <div class="row row-productname">
+                <div class="col-7 col-productname">
+                    <p class="product-name1">Product Name - Informations</p>
+                </div>
+                <div class="col-5">
+
+                </div>
+            </div>
+            <div class="row row-product-img">
+                <div class="col-7 col-product-img">
+                    <div class="container">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img/xe1.jpg" style="width:100%">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img/xe2.jpg" style="width:100%">
+                          </div>
+                            
+                          <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img/xe3.jpg" style="width:100%">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%">
+                          </div>
+                            
+                          <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%">
+                          </div>
+                            
+                          <a class="prev" onclick="plusSlides(-1)">❮</a>
+                          <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                          <div class="caption-container">
+                            <p id="caption"></p>
+                          </div>
+                        
+                          <div class="row">
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe1.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe2.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe3.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+                            </div>    
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         </div>
     </div>
     
@@ -174,6 +251,37 @@
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
         // ]]>
+    </script>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
     </script>
     <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
