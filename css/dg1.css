@@ -63,8 +63,8 @@ ul, ol {
     
 }
 .pic-area .picture{
-    width: 100%;
-    height: auto;
+    width: 465px;
+    height: 250px;
 }
 .ellipsis2{
     
@@ -300,3 +300,4 @@ a {
     height: 700pxx;
     margin-left: 10px;
   }
+ 
