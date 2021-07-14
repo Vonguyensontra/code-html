@@ -1,3 +1,7 @@
+header{
+  position: relative;
+    height: 500px;
+}
 .container1{
     width: 100%;
     height: auto;
@@ -18,10 +22,7 @@
     height: 100%;
     /* background-color: rgb(231, 211, 207); */
 }
-.bg-cl-l{
-    height: 100%;
-    /* background-color: rgb(60, 102, 102); */
-}
+
 
 .form-timkiem .form-control{
     border: 1px solid #e5ecef;
@@ -64,7 +65,7 @@ ul, ol {
 }
 .pic-area .picture{
     width: 465px;
-    height: 250px;
+    min-height: 250px;
 }
 .ellipsis2{
     
@@ -145,14 +146,14 @@ element.style {
     border-radius: 10px;
     background-color: #f7921a;
     color: white;
-    padding: 10px 20px;
-
+    padding: 4px 20px;
     margin-top:10px;
     position: absolute;
     right: 0px;
     min-width: 32%;
     font-size: 1em;
     margin-right:20px;
+    width: 10%;
 }
 
 #btn-bg:hover{
@@ -189,6 +190,7 @@ a {
 .breadcrumb li a{
     color: #999999 ;
 }
+
 .label-tk{
     font-size: 20px;
     font-weight: bold;

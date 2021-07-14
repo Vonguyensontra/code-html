@@ -15,7 +15,7 @@
     <!-- MY CSS -->
     <link rel="stylesheet" href="css/dg1.css">
     <link rel="stylesheet" href="css/header.css">
-
+    <!-- CSS GetDateTime -->
     <style>
         #backtop{
             font-size: 40px;
@@ -39,7 +39,7 @@
             height: 30px;
         }
     </style>
-
+    <!-- JS GetDateTime -->
     <script>
         function date_time(){
             var today = new Date(); //lay ngay gio hien tai
@@ -86,17 +86,16 @@
             document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
         }
     </script>
-
+    
 </head>
 <body>
     <!-- Header! -->
     <header>
-    <div class="container1">
+        <div class="container1">
         <!-- Tabar -->
         <div class="tabar">
             <div class="minitabar">
                 <div class="socialnetwork col-4">
-
                     <p class="text mr-4 margin textcolor ">Theo dõi chúng tôi:</p>
                     <a href="" class="margin iconcolor hovericon"><i class="fab fa-facebook-f"></i></a>
                     <a href="" class="margin iconcolor hovericon"><i class="fab fa-twitter"></i></a>
@@ -104,12 +103,170 @@
                     <a href="" class="margin iconcolor hovericon"><i class="fab fa-youtube"></i></a>
                 </div>
                 <div class="thetrang col-6 "></div>
-                <div class="login">
+                <!-- Col Đăng nhập - Đăng ký -->
+                <div class="col-4 col-login">
+                    <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng Nhập</button>/
+                    <button class="btn-login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng Ký</button>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                          <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="img/logo.png" alt="Avatar" class="avatar">
+                          </div>
+                      
+                          <div class="container">
+                            <label for="uname"><b>Tên đăng nhập/ Email</b></label>
+                            <input type="text" placeholder="Nhập Email hoặc Tên dăng nhập" name="uname" required>
+                      
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                              
+                            <button class="btn-login" type="submit">Đăng nhập</button>
+                            <label>
+                              <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                            </label>
+                          </div>
+                      
+                          <div class="container" style="background-color:#f1f1f1">
+                            <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
+                            <span class="psw">Quên mật khẩu? nhấn vào <a href="#">đây!</a></span>
+                          </div>
+                        </form>
+                    </div>
+                    <!-- CSS Login -->
+                    <style>
+                        body {font-family: Arial, Helvetica, sans-serif;}
+                        
+                        /* Full-width input fields */
+                        input[type=text], input[type=password] {
+                          width: 100%;
+                          padding: 12px 20px;
+                          margin: 8px 0;
+                          display: inline-block;
+                          border: 1px solid #ccc;
+                          box-sizing: border-box;
+                        }
+                        
+                        /* Set a style for all buttons */
+                        .btn-login{
+                          background-color: #242438;
+                          color: white;
+                          padding: auto;
+                          margin: 8px 0;
+                          border: none;
+                          cursor: pointer;
+                          width: auto;
+                          padding-left: 10px;
+                          padding-right: 10px;
+                        }
+                        
+                        .btn-login:hover {
+                          opacity: 0.8;
+                        }
+                        
+                        /* Extra styles for the cancel button */
+                        .cancelbtn {
+                          width: auto;
+                          padding: 10px 18px;
+                          background-color: #f44336;
+                        }
+                        
+                        /* Center the image and position the close button */
+                        .imgcontainer {
+                          text-align: center;
+                          margin: 24px 0 12px 0;
+                          position: relative;
+                        }
+                        
+                        img.avatar {
+                          width: 40%;
+                          border-radius: 50%;
+                        }
+                        
+                        .container {
+                          padding: 16px;
+                        }
+                        
+                        span.psw {
+                          float: right;
+                          padding-top: 16px;
+                        }
+                        
+                        /* The Modal (background) */
+                        .modal {
+                          display: none; /* Hidden by default */
+                          position: fixed; /* Stay in place */
+                          z-index: 1; /* Sit on top */
+                          left: 0;
+                          top: 0;
+                          width: 100%; /* Full width */
+                          height: 100%; /* Full height */
+                          overflow: auto; /* Enable scroll if needed */
+                          background-color: rgb(0,0,0); /* Fallback color */
+                          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                          padding-top: 60px;
+                        }
+                        
+                        /* Modal Content/Box */
+                        .modal-content {
+                          background-color: #fefefe;
+                          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                          border: 1px solid #888;
+                          width: 900px; /* Could be more or less, depending on screen size */
+                        }
+                        
+                        /* The Close Button (x) */
+                        .close {
+                          position: absolute;
+                          right: 25px;
+                          top: 0;
+                          color: #000;
+                          font-size: 35px;
+                          font-weight: bold;
+                        }
+                        
+                        .close:hover,
+                        .close:focus {
+                          color: red;
+                          cursor: pointer;
+                        }
+                        
+                        /* Add Zoom Animation */
+                        .animate {
+                          -webkit-animation: animatezoom 0.6s;
+                          animation: animatezoom 0.6s
+                        }
+                        
+                        @-webkit-keyframes animatezoom {
+                          from {-webkit-transform: scale(0)} 
+                          to {-webkit-transform: scale(1)}
+                        }
+                          
+                        @keyframes animatezoom {
+                          from {transform: scale(0)} 
+                          to {transform: scale(1)}
+                        }
+                        
+                        /* Change styles for span and cancel button on extra small screens */
+                        @media screen and (max-width: 300px) {
+                          span.psw {
+                             display: block;
+                             float: none;
+                          }
+                          .cancelbtn {
+                             width: 100%;
+                          }
+                        }
+                    </style>
+                </div>
+                
+                
+                <!-- <div id="id01" class="modal">
                     <a href="dangnhap.html" class="mr-4 textcolor hover"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng
                         nhập</a>
                     <a href="DangKi.html" class="mr-0 pr-0 textcolor hover"><i
                             class="fas fa-user-plus iconcolor mr-2"></i>Đăng kí</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Header -->
@@ -164,7 +321,7 @@
                           <nav class="nav justify-content link1">
                             <a class="nav-link linknav" href="danhmuc.html">Trang chủ</a>
                             
-                            <div class="dropdown">
+                            <div class="dropdown ">
                                 <button class="dropbtn1">Cuộc đấu giá</button>
                                 <div class="dropdown-content">
                                   <a href="DanhMucSanPham.html">Cuộc đấu giá đăng diễn ra</a>
@@ -196,9 +353,10 @@
                 </ol>               
             </div>
         </div>
-    </div>
+        </div>
     </header>
-    <!-- Phần tìm kiếm và sản phẩm đấu giá -->
+    
+    <!-- Tìm kiếm/Product Infor - Footer -->
     <div class="container2">
 
         <!-- Row tìm kiếm và sản phẩm  -->
@@ -242,7 +400,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" id="btn-bg" class="btn">Lọc</button>
+                        <button type="submit" id="btn-bg" class="btn btn-tiny">Lọc</button>
                     </div>
                     
                     <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
@@ -263,7 +421,7 @@
    
             </div>
             <!--Col sản phẩm  -->
-            <div class="col-8 bg-cl-c">
+            <div class="col-8 bg-cl-c left">
                 <div class="row row-img">
                     <div class="col-3 col-img">
                         <div class="pic-area">
@@ -1017,9 +1175,6 @@
                     </div>
                   </div>
             </div>
-            <!-- Col quảng cáo google -->
-            <div class="col-2 bg-cl-l">
-            </div>
         </div>
         <!-- Row - Footer -->
         <div class="row row3">
@@ -1132,7 +1287,18 @@
         }
         // ]]>
     </script>
-
+    <!-- JS Login -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
