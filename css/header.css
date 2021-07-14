@@ -462,7 +462,6 @@ header{
     z-index: 1000;
 }
 .slideshow-container {
-    
     max-width: 100%;
     position: relative;
     margin: auto;
@@ -472,31 +471,39 @@ header{
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: auto;
     padding: 16px;
     margin-top: -22px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    shape-outside: circle();
+    clip-path: circle();
   }
   
   /* Position the "next button" to the right */
   .next {
-    right: 0;
+    right: 40px;
     border-radius: 3px 0 0 3px;
+    
+  }
+  .prev{
+      left: 40px;;
   }
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: #f7921a;
+
   }
   
+  
   /* Caption text */
-  .text {
+  .text1 {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -504,6 +511,34 @@ header{
     bottom: 8px;
     width: 100%;
     text-align: center;
+  }
+  .buttonslide{
+      
+      position: absolute;
+      top: 290px;
+      left: 620px;
+  }
+  .btn123{
+    color: #fff;
+    padding: 7px 30px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    left: 100px;
+  }
+  .at{
+    background: #f7921a;
+    border: 1px solid #f7921a;
+    margin-right: 20px;
+  }
+  .ar{
+    margin-right: 10px;
+   
+  }
+  .at:hover{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
   }
   
   /* Number text (1/3 etc) */
@@ -534,9 +569,9 @@ header{
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: 100000000000s;
     animation-name: fade;
-    animation-duration: 10s;
+    animation-duration: 10000000000s;
   }
   
   @-webkit-keyframes fade {
@@ -554,7 +589,7 @@ header{
     .prev, .next,.text {font-size: 11px}
   }
 .imgslide{
-    height: 700px;
+    height: 600px;
     width: 100%;
     vertical-align: middle;
 }
@@ -565,5 +600,12 @@ header{
 
 .displaynone{
     display: none;
+}
+.badot{
+    position: absolute;
+    margin: auto;
+    left: 720px;
+    top: 750px;
+    z-index: 3;
 }
 
