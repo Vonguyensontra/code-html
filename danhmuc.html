@@ -10,6 +10,78 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        #backtop{
+            font-size: 40px;
+            color: #f7921a;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            cursor: pointer;
+        }
+        #backtop:hover{
+            color: gray;
+        }
+        .time-part{
+            background-color: #f7921a; 
+            color: white;
+            font-size: 19px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+
+    <script>
+        function date_time(){
+            var today = new Date(); //lay ngay gio hien tai
+            var gio = today.getHours(); //lay gio hien tai
+            var phut = today.getMinutes(); //lay phut hien tai
+            var giay = today.getSeconds();
+            //cap nhat thoi gian sau moi giay
+            setTimeout("date_time()",1000); //cu sau 1 giay ta goi 
+
+            //ngay thang nam
+            var x = new Date();
+
+            // Lấy số thứ tự của ngày hiện tại
+            var current_day = x.getDay();
+            var day_name = '';
+            var day = x.getDate();
+            var month = x.getMonth() + 1;
+            var year = x.getFullYear();
+            // Lấy tên thứ của ngày hiện tại
+            switch (current_day) {
+            case 0:
+                day_name = "CHỦ NHẬT";
+                break;
+            case 1:
+                day_name = "THỨ HAI";
+                break;
+            case 2:
+                day_name = "THỨ BA";
+                break;
+            case 3:
+                day_name = "THỨ TƯ";
+                break;
+            case 4:
+                day_name = "THỨ NĂM";
+                break;
+            case 5:
+                day_name = "THỨ SÁU";
+                break;
+            case 6:
+                day_name = "THỨ BẢY";
+            }
+            
+            //truy cap vao id time, dan text thongtin
+            document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
+        }
+    </script>
+
 </head>
 <body>
     <!-- Header -->
@@ -622,6 +694,20 @@
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
         
+        <!-- Date-time -->
+        <div class="time-part">
+            <i style="margin-right: 4px;" class="far fa-clock"></i>
+            <label id='time'>
+                <script>date_time(); //goi ham
+                </script>
+            </label>
+        </div>
+        
+        
+        <!-- Back-Top -->
+        <div id="backtop">
+            <i class="fas fa-chevron-circle-up"></i>
+        </div>
 
     </footer>
     <!-- Footer -->
@@ -631,5 +717,25 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/header.js"></script>
+
+    <!-- Back-Top -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#backtop').fadeIn();
+                }else{
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function(){
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+            });
+        });
+        
+    </script>
+    
 </body>
 </html>
