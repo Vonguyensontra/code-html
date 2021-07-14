@@ -130,9 +130,144 @@
     </header>
     <!-- Phần tìm kiếm và sản phẩm đấu giá -->
     <div class="container2">
-        <!-- Col sản phẩm liên quan -->
+        <div class="row row2">
+            <!-- Col sản phẩm liên quan -->
         <div class="col-2 bg-cl-r left">
 
+        </div>
+        <!-- Chi tiết sản phẩm - Thông tin đấu giá -->
+        <div class="col-8 bg-cl-c">
+            <div class="row row-productname">
+                <div class="col-7 col-productname">
+                    <p class="product-name1">Product Name - Informations</p>
+                </div>
+                <div class="col-5">
+
+                </div>
+            </div>
+            <div class="row row-product-img">
+                <div class="col-7 col-product-img">
+                    <div class="container">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%; height: 500px;">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="img/xe1.jpg" style="width:100%; height: 500px">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="img/xe2.jpg" style="width:100%; height: 500px">
+                          </div>
+                            
+                          <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="img/xe3.jpg" style="width:100%; height: 500px">
+                          </div>
+                        
+                          <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%; height: 500px">
+                          </div>
+                            
+                          <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="img/xe.jpg" style="width:100%; height: 500px">
+                          </div>
+                            
+                          
+                        
+                          <div class="caption-container">
+                            <p id="caption"></p>
+                          </div>
+                        
+                          <div class="row">
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width: 100%" onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe1.jpg" style="width: 100%" onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe2.jpg" style="width: 100%" onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe3.jpg" style="width: 100%" onclick="currentSlide(4)" alt="">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width: 100%" onclick="currentSlide(5)" alt="">
+                            </div>    
+                            <div class="column">
+                              <img class="demo cursor" src="img/xe.jpg" style="width: 100%" onclick="currentSlide(6)" alt="">
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="col-4 col-auction-info">
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Row - Footer -->
+        <div class="row row3">
+            <footer>
+
+                <div class="container">
+                    <!--Bắt Đầu Nội Dung Giới Thiệu-->
+                    <div class="noi-dung about">
+                        <h2>Về Chúng Tôi</h2>
+                        <p>Lorem ipsumdolor sit...</p>
+                        <ul class="social-icon">
+                            <li><a href=""><i class="fab fa-facebook-f text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-google-plus-g text-white"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube text-white"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Giới Thiệu-->
+                    <!--Bắt Đầu Nội Dung Đường Dẫn-->
+                    <div class="noi-dung links">
+                        <h2>Đường Dẫn</h2>
+                        <ul>
+                            <li><a href="#">Trang Chủ</a></li>
+                            <li><a href="#">Liên hệ bán hàng</a></li>
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Đường Dẫn-->
+                    <!--Bắt Đâu Nội Dung Liên Hệ-->
+                    <div class="noi-dung contact">
+                        <h2>Thông Tin Liên Hệ</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fa fa-map-marker"></i></span>
+                                <span>Nam Kì Khởi Nghĩa<br />
+                                    Fsoft, Thành Phố Đà Nẵng<br />
+                                    Việt Nam</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-phone"></i></span>
+                                <p><a href="#">+84 123 456 789</a>
+                                    <br />
+                                    <a href="#">+84 987 654 321</a>
+                                </p>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope"></i></span>
+                                <p><a href="#">codedream@gmail.com</a></p>
+                            </li>
+        
+                        </ul>
+                    </div>
+                    <!--Kết Thúc Nội Dung Liên Hệ-->
+                </div>
+                
+        
+            </footer>
         </div>
     </div>
     
@@ -174,6 +309,37 @@
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
         // ]]>
+    </script>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
     </script>
     <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
