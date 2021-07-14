@@ -1,0 +1,95 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right,rgb(75, 197, 140),rgb(98, 105, 109));
+}
+.show-btn{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(168, 216, 192);
+    transform: translate(-50%, -50%);
+}
+.show-btn{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input[type="checkbox"]{
+    display: none;
+}
+#show:checked~ .container{
+    display: block;
+} 
+.container{
+    display: none;
+    width: 450px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: cadetblue;
+    border: 1px solid tomato;
+}
+.container{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.container .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+}
+.container h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.container form{
+    margin: 20px;
+}
+.container label{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.container input{
+    display: block;
+    padding-top: 15px;
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+.container button{
+    display: block;
+    width: 97%;
+
+    padding: 8px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right,rgb(194, 230, 96),rgb(20, 147, 221));
+    color: white;
+    cursor: pointer;
+   
+    margin-top: 20px;
+}
+.container a{
+    
+    text-decoration: none;
+    color: rgb(176, 214, 195);
+}
+.link{
+    text-align: center;
+    margin-top: 15px;
+}

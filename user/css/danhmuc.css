@@ -528,6 +528,8 @@ html {
   }
 body {
     min-height: 100%;
+    font-family: 'Poppins',sans-serif;
+    
   }
 .tabar{
     background-color: 	#242438;
