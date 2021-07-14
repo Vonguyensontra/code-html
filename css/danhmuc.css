@@ -25,9 +25,9 @@
     color: white;
 }
 .nav_customer{
-    margin-top: -200px;
+    margin-left: 9.5%;
     height: 700px;
-    width: 100%;
+    width: 80.5%;
     
 }
  .left_customer{
@@ -106,37 +106,37 @@
    
 }
 .masonry_holder{
-  
+    margin: 20%;
    top: 0;
     position: absolute;
     z-index: 0;
 }
 .masonry_holder2{   
-   
+    margin: 20%;
     position: absolute;   
     top: 0;
     z-index: 0;
 }
 .masonry_holder3{
-   
+    margin: 20%;
     position: absolute;   
     top: 0;
     z-index: 0;
 }
 .masonry_holder4{
-    
+    margin: 20%;
     position: absolute;
     top: 0;
     z-index: 0;
 }
 .masonry_holder5{
-  
+    margin: 20%;
     position: absolute;
     top: 0%;
     z-index: 0;
 }
 .masonry_holder6{
-  
+    margin: 20%;
     position: absolute;
     top: 0%;
     z-index: 0;
