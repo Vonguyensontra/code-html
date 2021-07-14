@@ -63,8 +63,8 @@ ul, ol {
     
 }
 .pic-area .picture{
-    width: 100%;
-    height: 240px;
+    width: 465px;
+    height: 250px;
 }
 .ellipsis2{
     
@@ -160,3 +160,144 @@ element.style {
     color: black;
     border: 1px solid lightgray;
 }
+.row-link{
+    /* background-color: #0056b3; */
+    width: auto;
+    height: 20px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.breadcrumb {
+    background: transparent;
+    margin-bottom: 0px;
+    padding-right: 0;
+    color: #999999 ;
+}
+.breadcrumb li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+
+}
+.breadcrumb li a{
+    color: #999999 ;
+}
+.label-tk{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    margin: 0 0 12px;
+    position: relative;
+    padding: 0 0 12px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.productname-style{
+    padding-left: 10px;
+    background: #fff;
+}
+.row-number-partic {
+    padding-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+
+}
+.row-number-partic1{
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+.row-number-partic p{
+    margin-bottom: 0;
+
+}
+.col-productname p{
+    font-size:  18px;
+    font-weight: 900;
+    height: 40px;
+    margin-left: 10px;
+}
+.container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color:white;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  img {
+    vertical-align: middle;
+    min-height: 130px;
+  }
+  .col-auction-info{
+    background-color: wheat;
+    width: 100%;
+    height: 700pxx;
+    margin-left: 10px;
+  }
+ 

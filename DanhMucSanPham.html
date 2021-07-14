@@ -15,9 +15,82 @@
     <!-- MY CSS -->
     <link rel="stylesheet" href="css/dg1.css">
     <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        #backtop{
+            font-size: 40px;
+            color: #f7921a;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            cursor: pointer;
+        }
+        #backtop:hover{
+            color: gray;
+        }
+        .time-part{
+            background-color: #f7921a; 
+            color: white;
+            font-size: 19px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+
+    <script>
+        function date_time(){
+            var today = new Date(); //lay ngay gio hien tai
+            var gio = today.getHours(); //lay gio hien tai
+            var phut = today.getMinutes(); //lay phut hien tai
+            var giay = today.getSeconds();
+            //cap nhat thoi gian sau moi giay
+            setTimeout("date_time()",1000); //cu sau 1 giay ta goi 
+
+            //ngay thang nam
+            var x = new Date();
+
+            // Lấy số thứ tự của ngày hiện tại
+            var current_day = x.getDay();
+            var day_name = '';
+            var day = x.getDate();
+            var month = x.getMonth() + 1;
+            var year = x.getFullYear();
+            // Lấy tên thứ của ngày hiện tại
+            switch (current_day) {
+            case 0:
+                day_name = "CHỦ NHẬT";
+                break;
+            case 1:
+                day_name = "THỨ HAI";
+                break;
+            case 2:
+                day_name = "THỨ BA";
+                break;
+            case 3:
+                day_name = "THỨ TƯ";
+                break;
+            case 4:
+                day_name = "THỨ NĂM";
+                break;
+            case 5:
+                day_name = "THỨ SÁU";
+                break;
+            case 6:
+                day_name = "THỨ BẢY";
+            }
+            
+            //truy cap vao id time, dan text thongtin
+            document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
+        }
+    </script>
+
 </head>
 <body>
-<header>
+    <!-- Header! -->
+    <header>
     <div class="container1">
         <!-- Tabar -->
         <div class="tabar">
@@ -94,8 +167,7 @@
                             <div class="dropdown">
                                 <button class="dropbtn1">Cuộc đấu giá</button>
                                 <div class="dropdown-content">
-                                  <a href="DanhMucSanPham.html">Cuộc đấu giá sắp đấu giá</a>
-                                  <a href="#">Cuộc đấu giá đang diễn ra</a>
+                                  <a href="DanhMucSanPham.html">Cuộc đấu giá đăng diễn ra</a>
                                   <a href="#">Cuộc đấu giá đã kết thúc</a>
                                 </div>
                             </div>
@@ -117,16 +189,18 @@
                         
                     </div>
                 </div>
-            
+            <div class="row row-link">
+                <ol class="breadcrumb">
+                    <li><a href="danhmuc.html">Trang chủ / </a></li>
+                    <li class="active"> Cuộc đấu giá</li>
+                </ol>               
+            </div>
         </div>
     </div>
     </header>
-        <!-- Phần tìm kiếm và sản phẩm đấu giá -->
+    <!-- Phần tìm kiếm và sản phẩm đấu giá -->
     <div class="container2">
-        <!-- Trang chủ/danh mục chọn -->
-        <div class="row row1">
 
-        </div>
         <!-- Row tìm kiếm và sản phẩm  -->
         <div class="row row2">
             <!--Col tìm kiếm  -->
@@ -193,14 +267,18 @@
                 <div class="row row-img">
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe1.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -210,14 +288,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -241,19 +311,39 @@
                                         <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
                                     </div> -->
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p">Số người:</p>
+                        </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
                             </div>
                         </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -263,14 +353,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -296,18 +378,37 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -317,14 +418,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -350,18 +443,37 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -371,14 +483,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -404,20 +508,39 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
                 <div class="row row-img">
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -427,14 +550,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -458,19 +573,39 @@
                                         <a href="#" class="button yith-wcqv-button" data-tooltip="Quickview" data-product_id="4679"><i class="fa fa-search"></i></a>
                                     </div> -->
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
                             </div>
                         </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -480,14 +615,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -513,18 +640,37 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -534,14 +680,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -567,18 +705,37 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="col-3 col-img">
                         <div class="pic-area">
-                            <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            <a href="DaugiaInfo.html">
+                                <img src="img/xe.jpg" class="img-fluid picture" alt="">
+                            </a>
                         </div>
-                        <a id="title" style="font-size: 16px;" class="ellipsis2" href="#">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel illum laborum, esse ad qui beatae. Laboriosam sequi quaerat vel esse veritatis, ipsam harum iste quia illum cum fugit repudiandae!
-                        </a>
+                        <h3 class="productname-style"> 
+                            <a id="title" style="font-size: 16px;" class="ellipsis2" href="DaugiaInfo.html">
+                                Product-Name
+                            </a>
+                        </h3>                       
                         <div class="details-container">
                             <div class="details-price-container details-item">
-                                Ngày mở :
+                                Ngày kết thúc :
                                 <span class="price">
                                     <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
                                 </span>
@@ -588,14 +745,6 @@
                                     </div>
                                     <div class="component wishlist">
                                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-4679">
-                                            <div class="yith-wcwl-add-button show" style="display:block">
-
-                                                <!-- <a href="/real-estate/?product_cat=villa&amp;post_type=product&amp;s&amp;add_to_wishlist=4679" data-product-id="4679" data-product-type="simple" class="add_to_wishlist button " data-tooltip="Add to Wishlist">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a> -->
-                                                <img src="" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
-                                            </div>
-
                                             <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
                                                 <a href="#" data-toggle="tooltip" data-tooltip="Add to Wishlist Wishlist" data-placement="top" title="Browse Wishlist">
                                                     <i class="fa fa-heart"></i>
@@ -621,10 +770,25 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row row-number-partic">
+                            <div class="col-4">
+                                <p class="text-muted p-style">Số người:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#">#</p>
+                            </div>
+                        </div>
+                        <div class="row row-number-partic1">
+                            <div class="col-4">
+                                <p class="text-muted">Cao nhất:</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="#"># $</p>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
-                <!-- <div class="row row-img">
+                    <!-- <div class="row row-img">
                     <div class="col-3 col-img">
                         <div class="pic-area">
                             <img src="images/xe.jpg" class="img-fluid picture" alt="">
@@ -857,9 +1021,9 @@
             <div class="col-2 bg-cl-l">
             </div>
         </div>
+        <!-- Row - Footer -->
         <div class="row row3">
             <footer>
-
                 <div class="container">
                     <!--Bắt Đầu Nội Dung Giới Thiệu-->
                     <div class="noi-dung about">
@@ -908,15 +1072,27 @@
                     </div>
                     <!--Kết Thúc Nội Dung Liên Hệ-->
                 </div>
-                
         
+
+                <!-- Date-time -->
+                <div class="time-part">
+                    <i style="margin-right: 4px;" class="far fa-clock"></i>
+                    <label id='time'>
+                        <script>date_time(); //goi ham
+                        </script>
+                    </label>
+                </div>
+                
+                
+                <!-- Back-Top -->
+                <div id="backtop">
+                    <i class="fas fa-chevron-circle-up"></i>
+                </div>
+
             </footer>
         </div>
         
     </div>
-
-    <!-- Footer -->
-
 
     <!-- JS funtions -->
     <script type="text/javascript">
@@ -956,6 +1132,7 @@
         }
         // ]]>
     </script>
+
     <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -963,5 +1140,25 @@
     <script src="js/popper.min.js"></script>
     <script src="js/header.js"></script>
     <!-- My JS -->
+
+    <!-- Back-Top -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#backtop').fadeIn();
+                }else{
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function(){
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+            });
+        });
+        
+    </script>
+
 </body>
 </html>
