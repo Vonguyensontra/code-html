@@ -8,79 +8,479 @@
     <link rel="stylesheet" href="css/dangki.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/auctioneCore2.css"> -->
+    <link rel="stylesheet" href="css/responsive54.css"> 
+    <link rel="stylesheet" href="css/stylede54.css">
     <title>Đăng kí tài khoản</title>
-
-    <style>
-        #backtop{
-            font-size: 40px;
-            color: #f7921a;
-            position: fixed;
-            bottom: 40px;
-            right: 20px;
-            cursor: pointer;
-        }
-        #backtop:hover{
-            color: gray;
-        }
-        .time-part{
-            background-color: #f7921a; 
-            color: white;
-            font-size: 19px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 300px;
-            height: 30px;
-        }
-    </style>
-
-    <script>
-        function date_time(){
-            var today = new Date(); //lay ngay gio hien tai
-            var gio = today.getHours(); //lay gio hien tai
-            var phut = today.getMinutes(); //lay phut hien tai
-            var giay = today.getSeconds();
-            //cap nhat thoi gian sau moi giay
-            setTimeout("date_time()",1000); //cu sau 1 giay ta goi 
-
-            //ngay thang nam
-            var x = new Date();
-
-            // Lấy số thứ tự của ngày hiện tại
-            var current_day = x.getDay();
-            var day_name = '';
-            var day = x.getDate();
-            var month = x.getMonth() + 1;
-            var year = x.getFullYear();
-            // Lấy tên thứ của ngày hiện tại
-            switch (current_day) {
-            case 0:
-                day_name = "CHỦ NHẬT";
-                break;
-            case 1:
-                day_name = "THỨ HAI";
-                break;
-            case 2:
-                day_name = "THỨ BA";
-                break;
-            case 3:
-                day_name = "THỨ TƯ";
-                break;
-            case 4:
-                day_name = "THỨ NĂM";
-                break;
-            case 5:
-                day_name = "THỨ SÁU";
-                break;
-            case 6:
-                day_name = "THỨ BẢY";
+     <style>
+        @media only screen and (max-width: 479px) {
+            .select2-container {
+                display: inline-block !important;
+                visibility: unset !important;
             }
-            
-            //truy cap vao id time, dan text thongtin
-            document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
         }
-    </script>
-
+        .select2-container{
+            width: 100% !important;
+        }
+        .RegisterTitleContainer {
+            text-align: center;
+            font-weight: 400;
+        }
+        .form-group{
+            margin-bottom: 25px !important;
+        }
+    
+        @media (min-width: 1200px) and (max-width: 1299px) {
+            #img_IdCardPhoto1Company, #img_IdCardPhoto2Company {
+                height: 210px !important;
+            }
+        }
+        @media (min-width: 1300px) {
+            #img_IdCardPhoto1Company, #img_IdCardPhoto2Company {
+                height: 210px !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #img_IdCardPhoto1Company, #img_IdCardPhoto2Company {
+                height: 150px !important;
+            }
+        }
+        @media (min-width: 1024px) and (max-width: 1299px) {
+            #img_IdCardPhoto1Company, #img_IdCardPhoto2Company {
+                height: 100px !important;
+            }
+        }
+        </style> 
+    
+    <style>
+        .modeltheme-content > div p {
+            padding: 3px 0 !important;
+        }
+    
+        #myModal {
+            padding: 0px !important;
+            border-radius: 20px;
+        }
+    
+        .modeltheme-content h3 {
+            background: #484848;
+            border-radius: 11px 11px 0px 0px;
+            margin: 0;
+            padding: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    
+        .nav > li > a {
+            position: relative;
+            display: block;
+            padding: 20px 50px 10px;
+        }
+    
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+            color: #b41712 !important;
+            border: unset;
+            background-color: #fff;
+            border-bottom-color: transparent;
+            cursor: default !important;
+            border-bottom: solid 3px #b41712;
+        }
+    
+    
+        #login_popup_form {
+            margin: 35px 80px;
+        }
+    
+        #register_popup_form {
+            margin: 20px 80px;
+        }
+    
+    
+            #register_popup_form input[type=text], #register_popup_form input[type=password], #register_popup_form select {
+                box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.075) !important;
+                /*margin-top: -10px;*/
+            }
+    
+    
+        #login_password, #popup-login-email {
+        }
+    
+        .form-control {
+            height: 34px !important;
+            padding: 6px 12px !important;
+            background-color: #fff !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            font-style: unset;
+        }
+    
+        .control-label {
+            font-size: 15px;
+            color: #333;
+            font-weight: 400;
+        }
+    
+        .btn-facebook {
+            color: #fff;
+            background-color: #3b5998;
+            border-color: rgba(0,0,0,.2);
+        }
+    
+        .btn-social, .btn-social-icon {
+            position: relative;
+            padding-left: 44px;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        .btn-google {
+            color: #fff;
+            background-color: #dd4b39;
+            border-color: rgba(0,0,0,.2);
+        }
+    
+        .btn-social-icon > :first-child, .btn-social > :first-child {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 42px;
+            line-height: 34px;
+            font-size: 1.6em;
+            text-align: center;
+            border-right: 1px solid rgba(0,0,0,.2);
+            height: 39px;
+            padding-top: 3px;
+        }
+    
+        #login-form .btn-info {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 8px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            border-radius: 4px;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    
+        .btn-social, .btn-social-icon {
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        .btn-facebook.active, .btn-facebook.focus, .btn-facebook:active, .btn-facebook:focus, .btn-facebook:hover, .open > .btn-facebook.dropdown-toggle {
+            color: #fff;
+            background-color: #2d4373;
+            border-color: rgba(0,0,0,.2);
+        }
+    
+        .btn-google.active, .btn-google.focus, .btn-google:active, .btn-google:focus, .btn-google:hover, .open > .btn-google.dropdown-toggle {
+            color: #fff;
+            background-color: #c23321;
+            border-color: rgba(0,0,0,.2);
+        }
+    
+        .input-wrap {
+            float: right;
+            width: 70%;
+            margin: 0;
+        }
+    
+        .control-label-Novatic {
+            font-size: 15px;
+            color: #333;
+            width: 30%;
+            font-weight: 400 !important;
+            padding-top: 2px;
+            padding-right: 20px;
+        }
+    
+        .form-control:focus {
+            border-color: #66afe9 !important;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+    
+        .modeltheme-show {
+            display: unset !important;
+        }
+    
+        #registerTab {
+            max-height: 80vh;
+            overflow-y: scroll;
+        }
+    
+        h3.relative {
+            text-transform: uppercase !important;
+        }
+    
+        @media only screen and (max-width: 1024px) {
+            /*.userNameRegister {
+                    margin-bottom: 0px !important;
+                }
+                .cmtNovatic {
+                    margin-bottom: 5px !important;
+                }*/
+        }
+    
+    
+    
+        @media only screen and (max-width: 768px) {
+            #login_popup_form {
+                margin: 20px 30px;
+            }
+    
+            .nav > li > a {
+                position: relative;
+                display: block;
+                padding: 20px 20px 10px;
+            }
+            /*.control-label-Novatic {
+                    width: 40%;
+                    padding-top: 0px;
+                }*/
+            #register_popup_form {
+                margin: 20px 20px !important;
+                padding: unset;
+                width: unset;
+                height: unset;
+                border: unset;
+            }
+            #register_popup_submit {
+                width: 100% !important;
+                float: unset !important;
+            }
+            /*.input-wrap {
+                    float: right;
+                    width: 60%;
+                    margin: 0;
+                }*/
+            .PhapNhan {
+                float: right;
+                padding-right: 0px;
+            }
+    
+            #imagePreview {
+                width: 100%
+            }
+    
+            .user-role {
+                width: 100%
+            }
+    
+            #BackLoginForm {
+                float: right;
+            }
+    
+            .control-label-Novatic {
+                /*display: none;*/
+                font-weight: 600 !important;
+                width: unset !important;
+            }
+    
+            #registerTab input, #login-modal-content input {
+                border-radius: 0 !important;
+            }
+    
+            .input-wrap {
+                float: right;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    
+        @media only screen and (max-width: 480px) {
+            .btn-social, .btn-social-icon {
+                text-align: right;
+            }
+    
+            .user-role {
+                width: 100%;
+            }
+    
+            #userNameRegister {
+                margin: 0px !important;
+            }
+    
+            #register_popup_form {
+                margin: 10px 20px !important;
+                padding: unset;
+                width: unset;
+                height: unset;
+                border: unset;
+            }
+            #register_popup_submit {
+                width: 100% !important;
+                float: unset !important;
+            }
+        }
+    
+        @media only screen and (max-width: 320px) {
+            #login_popup_form {
+                margin: 20px 30px;
+            }
+    
+            .modeltheme-modal {
+                min-width: 300px;
+            }
+    
+    
+            #register_popup_form {
+                margin: 10px 20px !important;
+                padding: unset;
+                width: unset;
+                height: unset;
+                border: unset;
+            }
+    
+            #register_popup_submit {
+                width: 100% !important;
+                float: unset !important;
+            }
+            .btn-social, .btn-social-icon {
+                text-align: right;
+                font-size: 13px;
+            }
+    
+            .form-control {
+                font-size: 13px;
+            }
+        }
+    
+        #myModal {
+            padding: 0px !important;
+            border-radius: 20px;
+            /*display: none;*/
+            max-width: 630px;
+            min-width: 300px;
+            height: auto;
+            z-index: 2000;
+        }
+    
+        .modal-backdrop {
+            background-color: unset;
+        }
+    
+        .modeltheme-content > div {
+            padding: 15px 40px 10px;
+        }
+    
+        .birth-day, .birth-month, .birth-year {
+            width: 30% !important;
+        }
+    
+        .birth-year {
+            float: right
+        }
+    
+        #birthday-picker {
+            display: flex; /* establish flex container */
+            flex-direction: row; /* default value; can be omitted */
+            flex-wrap: nowrap; /* default value; can be omitted */
+            justify-content: space-between; /* switched from default (flex-start, see below) */
+        }
+    
+        .input {
+            font-size: 15px !important;
+            padding: 6px !important;
+        }
+    
+        .form-control {
+            color: #000;
+            font-weight: 400;
+        }
+    
+        .Novatic-login {
+            background-color: #b41712;
+        }
+    
+        .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+            background-color: #c23321;
+            border-color: rgba(0,0,0,.2);
+        }
+    
+        .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+            outline: #b41712 solid 1px;
+        }
+        #registerTab input{
+            border-radius: 0 !important;
+            border: 1px solid #ccc0 !important;
+        }
+        .RegisterFormDesk {
+            width: 1024px;
+            margin: 0 auto !important;
+            border: 1px solid #2a2a2a36;
+            padding: 30px 80px;
+            height: 1510px;
+            margin-bottom: 40px !important;
+        }
+        .form-control {
+            border-radius: 0 !important;
+            border: none !important;
+            border-bottom: 1px solid #ccc !important;
+            box-shadow: none !important;
+        }
+    
+        .form-control:focus {
+            box-shadow: none!important;
+            border-color: #b4171280  !important;
+            outline: 0;
+        }
+        .select2-container--default .select2-selection--single {
+            border:0px !important;
+        }
+        #register_popup_form input[type=text], #register_popup_form input[type=password], #register_popup_form select {
+            box-shadow: none !important;
+        }
+        .input-wrap-select2 {
+            border-bottom: 1px solid #ccc !important;
+        }
+        .input-wrap-select2:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border-color: #b4171280 !important;
+            border-bottom: 1px solid #b4171280 !important;
+        }
+        .select2-selection--single:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border-color: #b4171280 !important;
+            border-bottom: 1px solid #b4171280 !important;
+        }
+        #select2-BankId-container {
+            font-size: 15px !important;
+        }
+        .loginLogoContainer h1{
+            font-size: 25px !important;
+        }
+    </style>  -->
+    
 </head>
 <body>
     <div class="container1">
@@ -171,7 +571,7 @@
                             <div class="phone">
                                 <a href=""><i class="fas fa-phone-alt iconemail"></i></i></a>
                                 <p class="textemail">Phone:</p>
-                                <h6 class="textemail" style="margin-top: 2px;">+84 123 456 789</h6>
+                                <h6 class="textemail" style="margin-top: 2px;">124-567-8911-0</h6>
                             </div>
                       </div>
                     
@@ -182,256 +582,357 @@
         </div>
 
     </div>
-    <main class="text-center mb-5 ">
-        <form method="post" >
-                <label style=" font-size: 20px;">Đăng Ký  Tài Khoản</label>
-                <table  cellpadding="15" align="center" style="border: 1px solid black">
-                    <div >
-                    <tr class="ltk">
-                        <td>Loại Tài Khoản :</td>
-                        <td class="radio">
-                            <label style="margin-right: 40% ">
-                                <input id="input" type="radio" name="ltk" checked="true"> Cá Nhân
+     <div class="" id="" style="">
+        <div id="tabContent" class="tab-content">
+            <div id="" class="">
+    
+                <div style="text-align:center;padding-bottom:5px;" class="loginLogoContainer">
+                    <h1>Đăng ký tài khoản</h1>
+                </div>
+    
+                <div class="content bv-form RegisterFormDesk" id="register_popup_form">
+    
+    
+                    <div class="left-col">
+    
+                        <div class="form-group form-row">
+                            <label class="control-label control-label-Novatic">Loại tài khoản</label>
+                            <div class="input-wrap">
+    
+                                <label style="" class="col-sm-6 col-xs-6">
+                                    <input type="radio" id="checkboxTheNhan" name="role" value="1000002" checked="checked">
+                                    Cá nhân
+                                </label>
+                                <label style="" class="col-sm-6 col-xs-6 PhapNhan">
+                                    <input type="radio" id="checkboxPhapNhan" name="role" value="1000001">
+                                    Tổ chức
+                                </label>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic"><span class="personalLabel-v2">Họ và tên</span> <span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <div style="padding-left:0px; padding-right:4px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="1" class="form-control input" name="LastName" id="LastName" placeholder="Họ" data-bv-field="LastName">
+                                </div>
+                                <div style="padding-left:2px; padding-right:2px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="2" class="form-control input" name="MiddleName" id="MiddleName" placeholder="Tên đệm" data-bv-field="MiddleName">
+                                </div>
+                                <div style="padding-left:4px; padding-right:0px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="3" class="form-control input" name="FirstName" id="FirstName" placeholder="Tên" data-bv-field="FirstName">
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="form-group form-row company-novatic" style="display:none;">
+                            <label class="control-label control-label-Novatic">Chức vụ của người đại diện<span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <input type="text" tabindex="27" class="form-control input" name="name-Postion" id="reg_company_description" placeholder="Chức vụ">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic">Tên đăng nhập <span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <input type="text" tabindex="4" class="form-control input" name="full_name" id="reg_username" placeholder="Tối thiểu 8 ký tự gồm tiếng Việt không dấu và số" data-bv-field="user_name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic"><span class="">Số điện thoại</span> <span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <input type="text" tabindex="5" class="form-control input" name="phone_number" id="phone_number" placeholder="Nhập số điện thoại">
+                            </div>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic"><span class="">Địa chỉ email</span> <span style="color:red"> *</span></label>
+                            <div class="input-wrap ">
+                                <input type="text" tabindex="6" class="form-control input register-email-input" name="email" id="reg_email" placeholder="Nhập email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic" for="pasword">Mật khẩu <span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <input type="password" tabindex="7" class="form-control input" name="password" id="reg_password" placeholder="Tối thiểu 8 kí tự gồm ký tự viết hoa và số">
+                            </div>
+                        </div>
+                        <div id="userNameRegister" class="form-group ">
+                            <label class="control-label control-label-Novatic" for="pasword">Nhập lại mật khẩu <span style="color:red"> *</span></label>
+                            <div class="input-wrap">
+                                <input type="password" tabindex="8" class="form-control input" name="re_password" id="reg_Repassword" placeholder="Tối thiểu 8 kí tự gồm ký tự viết hoa và số">
+                            </div>
+                        </div>
+    
+                        <div class="form-group" id="register_birthday">
+                            <label class="control-label control-label-Novatic" for="birthdate">
+                                Ngày Sinh <span style="color:red"> *</span>
                             </label>
-                            <label>
-                                <input type="radio" name="ltk"> Tổ Chức
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Họ Và Tên : </td>
-                        <td>
-                            
-                            <label>
-                                <input id="input" type="text" name="ho" size="30" placeholder="Họ">
-                            </label>
-                            <label>
-                                <input id="input" type="text" name="tendem" size="30" placeholder="Tên Đệm">
-                            </label>
-                            <label>
-                                <input id="input" type="text" name="ten" size="30" placeholder="Tên">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tên Đăng Nhập :</td>
-                        <td>
-                            <input id="input" type="text" name="user" size="110" placeholder="Tối thiểu 8 kí tự gồm tiếng việt không dấu và số">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Số điện thoại :</td>
-                        <td>
-                            <input id="input" type="text" name="sdt" size="110" placeholder="Nhập số điện thoại">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Địa chỉ email :</td>
-                        <td>
-                            <input id="input" type="email" name="email" size="110" placeholder="Nhập email">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Mật Khẩu :</td>
-                        <td>
-                            <input id="input" type="password" name="password" size="110" placeholder="Tối thiểu 8 kí tự gồm kí tự viết hoa và số">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nhập Lại Mật Khẩu :</td>
-                        <td>
-                            <input id="input" type="password" name="rspassword" size="110" placeholder="Tối thiểu 8 kí tự gồm kí tự viết hoa và số">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ngày Sinh :</td>
-                        <td>
-                            <select id="form" name="day" style="width: 31%">
-                                <option value="ngay">Ngày</option>
-                                <option value="ngay1">1</option>
-                                <option value="ngay2">2</option>
-                                <option value="ngay3">3</option>
-                                <option value="ngay4">4</option>
-                                <option value="ngay5">5</option>
-                                <option value="ngay6">6</option>
-                                <option value="ngay7">7</option>
-                                <option value="ngay8">8</option>
-                                <option value="ngay9">9</option>
-                                <option value="ngay10">10</option>  
-                                <option value="ngay11">11</option>
-                                <option value="ngay12">12</option>
-                                <option value="ngay13">13</option>
-                                <option value="ngay14">14</option>
-                                <option value="ngay15">15</option>
-                                <option value="ngay16">16</option>
-                                <option value="ngay17">17</option>
-                                <option value="ngay18">18</option>
-                                <option value="ngay19">19</option>
-                                <option value="ngay20">20</option>
-                                <option value="ngay21">21</option>
-                                <option value="ngay22">22</option>
-                                <option value="ngay23">23</option>
-                                <option value="ngay24">24</option>
-                                <option value="ngay25">25</option>
-                                <option value="ngay26">26</option>
-                                <option value="ngay27">27</option>
-                                <option value="ngay28">28</option>
-                                <option value="ngay29">29</option>
-                                <option value="ngay30">30</option>
-                                <option value="ngay31">31</option>
-
-                            </select>
-                            <select id="form" name="month" style="width: 31%">
-                                <option value="thang">Tháng</option>
-                                <option value="thang1">1</option>
-                                <option value="thang2">2</option>   
-                                <option value="thang3">3</option>
-                                <option value="thang4">4</option>   
-                                <option value="thang5">5</option>
-                                <option value="thang6">6</option>   
-                                <option value="thang7">7</option>
-                                <option value="thang8">8</option>   
-                                <option value="thang9">9</option>
-                                <option value="thang10">10</option> 
-                                <option value="thang11">11</option>
-                                <option value="thang12">12</option> 
-                            </select>
-                            <select id="form" name="year" style="width: 31%"  >
-                                <option value="nam">Năm</option>
-                                <option value="nam2021">2021</option>
-                                <option value="nam2020">2020</option>
-                                <option value="nam2019">2019</option>
-                                <option value="nam2018">2018</option>
-                                <option value="nam2017">2017</option>   
-                                <option value="nam2016">2016</option>
-                                <option value="nam2015">2015</option>
-                                <option value="nam2014">2014</option>   
-                                <option value="nam2013">2013</option>
-                                <option value="nam2012">2012</option>
-                                <option value="nam2011">2011</option>   
-                                <option value="nam2010">2010</option>
-                                <option value="nam2009">2009</option>
-                                <option value="nam2008">2008</option>   
-                                <option value="nam2007">2007</option>
-                                <option value="nam2006">2006</option>
-                                <option value="nam2005">2005</option>   
-                                <option value="nam2004">2004</option>
-                                <option value="nam2003">2003</option>
-                                <option value="nam2002">2002</option>       
-                                <option value="nam2001">2001</option>
-                                <option value="nam2000">2000</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Địa Chỉ : </td>
-                        <td>
-                            
-                            <label>
-                                <input id="input" type="text" name="tinh" size="30" placeholder="Tỉnh/Thành Phố">
-                            </label>
-                            <label>
-                                <input id="input" type="text" name="quan" size="30" placeholder="Quận/Huyện">
-                            </label>
-                            <label>
-                                <input id="input" type="text" name="xa" size="30" placeholder="Xã/Phường">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input id="input" type="text" name="diachi" size="110" placeholder="Địa chỉ chi tiết">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Giới Tính</td>
-                        <td>
-                            <select id="form" style="width: 93%">
-                                <option>Giới Tính</option>
-                                <option>Nam</option>
-                                <option>Nữ</option>
-                                <option>Giới Tính Khác</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Số CMT/ Thẻ căn cước/ Hộ chiếu *</td>
-                        <td>
-                            <input id="input" type="text" name="cmt" size="110" placeholder="Nhập CMT, số thẻ căn cước, số hộ chiếu">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ngày cấp CMT/ Thẻ căn cước / Hộ chiếu *</td>
-                        <td>
-                            <input id="input" type="date" name="ngaycap" style="width: 93%" placeholder="dd/mm/yyyy">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nơi cấp CMT/ Thẻ căn cước / Hộ chiếu *</td>
-                        <td>
-                            <input id="input" type="text" name="cmt" size="110" placeholder="Nơi cấp CMT, số thẻ căn cước, số hộ chiếu">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <label>
-                                Ảnh mặt trước:
-                                <input id="input" type="file" name="cmt">
-                            </label>
-
-                            <label>
-                                Ảnh mặt sau:
-                                <input id="input" type="file" name="cmt" >
-                            </label>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Số tài khoản ngân hàng nhận hoàn tiền đặt trước (tài khoản của Cá nhân/ tổ chức đăng ký tham gia đấu giá) *</td>
-                        <td>
-                            <input id="input" type="text" name="cmt" size="110" placeholder="Số tài khoản ngân hàng nhận hoàn tiền đặt trước">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chọn ngân hàng *</td>
-                        <td >
-                            <select id="form" style="width: 93%">
-                                <option>Chọn tên ngân hàng</option>
-                                <option>Agribank</option>
-                                <option>Vietcombank</option>
-                                <option>BIDV</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chi nhánh ngân hàng *</td>
-                        <td>
-                            <input id="input" type="text" size="110" placeholder="Chi nhánh ngân hàng">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tên chủ tài khoản ngân hàng *</td>
-                        <td>
-                            <input id="input" type="text" size="110" placeholder="Tên chủ tài khoản">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="check">
-                            <input id="input" type="checkbox" ><span>Tôi cam kết tuân thủ Quyền và trách nhiệm của khách tham gia đấu giá, Chính sách bảo mật thông tin khách hàng, Cơ chế giải quyết tranh chấp, Quy chế hoạt động tại website đấu giá trực tuyến codedreamauction.vn</span>
-                        </td>
-                    </tr>
-                        <td colspan="2" align-item ="center" class="submit">
-                            <!-- <input id="input" class="btn-submit" type="submit" name="OK" value="Đăng Ký Tài Khoản"> -->
-                            <button type="submit" name="submit" class="btn-submit" id="input">Đăng Ký Tài Khoản</button>
-                        </td>
-                    </tr>
+                            <div class="input-wrap">
+                                <div id="birthday-picker-popup">
+                                    <div id="birthday-picker">
+                                        <select tabindex="9" id="birthday" class="birth-day form-control input col-sm-4 col-xs-4" name="birth[day]">
+                                            <option value="0">Ngày</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <select tabindex="10" id="birthdayMonth" class="birth-month form-control input col-sm-4 col-xs-4" name="birth[month]">
+                                            <option value="0">Tháng</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select tabindex="11" id="birthdayYear" class="birth-year form-control input col-sm-4 col-xs-4" name="birth[year]"><option> Năm </option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option><option>1989</option><option>1988</option><option>1987</option><option>1986</option><option>1985</option><option>1984</option><option>1983</option><option>1982</option><option>1981</option><option>1980</option><option>1979</option><option>1978</option><option>1977</option><option>1976</option><option>1975</option><option>1974</option><option>1973</option><option>1972</option><option>1971</option><option>1970</option><option>1969</option><option>1968</option><option>1967</option><option>1966</option><option>1965</option><option>1964</option><option>1963</option><option>1962</option><option>1961</option><option>1960</option><option>1959</option><option>1958</option><option>1957</option><option>1956</option><option>1955</option><option>1954</option><option>1953</option><option>1952</option><option>1951</option><option>1950</option><option>1949</option><option>1948</option><option>1947</option><option>1946</option><option>1945</option><option>1944</option><option>1943</option><option>1942</option><option>1941</option><option>1940</option><option>1939</option><option>1938</option><option>1937</option><option>1936</option><option>1935</option><option>1934</option><option>1933</option><option>1932</option><option>1931</option><option>1930</option><option>1929</option><option>1928</option><option>1927</option><option>1926</option><option>1925</option><option>1924</option><option>1923</option><option>1922</option><option>1921</option><option>1920</option><option>1919</option><option>1918</option><option>1917</option><option>1916</option><option>1915</option><option>1914</option><option>1913</option><option>1912</option><option>1911</option><option>1910</option><option>1909</option><option>1908</option><option>1907</option><option>1906</option><option>1905</option><option>1904</option><option>1903</option><option>1902</option><option>1901</option><option>1900</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic"><span class="personalLabel">Địa chỉ</span></label>
+                            <div class="input-wrap">
+                                <div style="padding-left:0px; padding-right:4px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="12" class="form-control input col-sm-4 col-xs-4" id="addressCity" placeholder="Tỉnh/Thành phố" data-bv-field="user_name">
+                                </div>
+                                <div style="padding-left:2px; padding-right:2px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="13" class="form-control input col-sm-4 col-xs-4" id="addressDistrict" placeholder="Quận/Huyện" data-bv-field="user_name">
+                                </div>
+                                <div style="padding-left:4px; padding-right:0px" class="col-sm-4 col-xs-4">
+                                    <input type="text" tabindex="14" class="form-control input col-sm-4 col-xs-4" id="addressWard" placeholder="Xã/Phường" data-bv-field="user_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label control-label-Novatic hidden480"></label>
+                            <div class="input-wrap">
+                                <input type="text" tabindex="15" class="form-control input " id="addressDetail" placeholder="Địa chỉ chi tiết" data-bv-field="user_name">
+                            </div>
+                        </div>
+                        <div style="padding-top:5px;margin-top:0px;" class="form-group cmtNovatic">
+                            <label class="control-label control-label-Novatic">Giới tính</label>
+                            <div class="input-wrap">
+                                <select tabindex="16" id="Gender" class="form-control input">
+                                    <option value="0">Chọn giới tính</option>
+                                    <option value="1">Nam</option>
+                                    <option value="2">Nữ</option>
+                                    <option value="3">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div style="margin-top:0px;margin-bottom: 0px;display:none" class="form-group cmtNovatic">
+                            <label class="control-label control-label-Novatic">CMT/ Thẻ căn cước/ Hộ chiếu</label>
+                            <div class="input-wrap">
+                                <select id="myselection" class="form-control input">
+                                    <option value="Two">Hoàn thiện hồ sơ sau khi đăng ký</option>
+                                    <option selected="selected" value="One">Upload ảnh CMT/ CCCD/ hộ chiếu</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="showOne" class="myDiv" style="display:block">
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Số CMT/ Thẻ căn cước/ Hộ chiếu <span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input tabindex="17" type="text" class="form-control register input" name="idCard_number" id="IdCardNumber" placeholder="Nhập số CMT, số thẻ căn cước, số hộ chiếu">
+                                </div>
+                            </div>
+    
+                            <div class="form-group form-row" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Ngày cấp CMT/ Thẻ căn cước / Hộ chiếu<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="date" tabindex="18" class="form-control register input" name="idCard_grantedDate" id="IdCardGrantedDate">
+                                </div>
+                            </div>
+    
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Nơi cấp CMT/ Thẻ căn cước / Hộ chiếu<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input tabindex="20" type="text" class="form-control register input" name="idCard_GrantedPlace" id="IdCardGrantedPlace" placeholder="Nơi cấp CMT, số thẻ căn cước, số hộ chiếu">
+                                </div>
+                            </div>
+                            <div class="form-group" style="height:240px">
+                                <label class="control-label control-label-Novatic"></label>
+                                <div id="imagePreview" class="input-wrap ">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-xs-6">
+                                            <div style="padding:0px !important" class="col-sm-12">
+                                                <label style="padding: 4px 0px;font-size:14px;font-weight: 600;" class="col-sm-12 control-label">
+                                                    Ảnh mặt trước
+                                                </label>
+                                                <div style="padding: 0px !important;display:none" class="col-sm-6">
+                                                    <input tabindex="21" class="form-control" style="width:100% ;padding: 3px 6px!important;height: 28px !important;" type="file" onchange="UploadFileIdCardPhoto1(event)" value="" id="counterparty_IdCardPhoto1Company_Upload" placeholder="">
+                                                </div>
+    
+                                            </div>
+                                            <div style="padding:5px 0px 0px" class="col-sm-12">
+                                                <img style="width:100%;height:100px ;border: 1px solid #00000026;height:auto; object-fit:cover;" id="img_IdCardPhoto1Company" alt="" src="img/idcard-front.png">
+                                            </div>
+                                            <p class="" style="display:none">
+                                                <label for="account_email">URL Ảnh CMT 1&nbsp;<span class="required"></span></label>
+                                                <input type="text" class="woocommerce-Input woocommerce-Input--email input-text" name="" id="counterparty_IdCardPhoto1Company" value="">
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <div style="padding:0px !important" class="col-sm-12">
+                                                <label style="padding: 4px 0px;font-size:14px;font-weight: 600;" class="col-sm-12 control-label">
+                                                    Ảnh mặt sau
+                                                </label>
+                                                <div style="padding: 0px !important;display:none" class="col-sm-6">
+                                                    <input tabindex="22" class="form-control" style="width:100%;padding: 3px 6px !important;height: 28px !important;" type="file" onchange="UploadFileIdCardPhoto2(event)" value="" id="counterparty_IdCardPhoto2Company_Upload" placeholder="">
+                                                </div>
+    
+                                            </div>
+                                            <div style="padding:5px 0px 0px" class="col-sm-12">
+                                                <img style="width:100%;height:100px;border: 1px solid #00000026;height:auto; object-fit:cover" id="img_IdCardPhoto2Company" alt="" src="img/idcard-back.png">
+                                            </div>
+                                            <p class="" style="display:none">
+                                                <label for="account_email">URL Ảnh CMT 2&nbsp;<span class="required"></span></label>
+                                                <input readonly="" type="text" class="woocommerce-Input woocommerce-Input--email input-text" name="" id="counterparty_IdCardPhoto2Company" value="">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Số tài khoản ngân hàng nhận hoàn tiền đặt trước (tài khoản của Cá nhân/ tổ chức đăng ký tham gia đấu giá)<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input tabindex="23" type="number" class="form-control register input" name="bankAccount_number" id="BankAccountNumber" placeholder="Số tài khoản ngân hàng nhận hoàn tiền đặt trước">
+                                </div>
+                            </div>
+    
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Chọn ngân hàng<span style="color:red"> *</span></label>
+                                <div class="input-wrap input-wrap-select2">
+                                    <select tabindex="-1" name="select" id="BankId" class="form-control fill dataSelect  input-accountId select2-hidden-accessible" aria-hidden="true">
+                                    <option value="0">Chọn tên ngân hàng</option><option value="1000043">Kho bạc nhà nước Việt Nam</option><option value="1000042">VIETINBANK_Ngân hàng TMCP Công thương Việt Nam</option><option value="1000041">STB_Ngân hàng TMCP Sài Gòn Thương Tín</option><option value="1000040">IBK_Ngân hàng IBK chi nhánh Hà Nội</option><option value="1000039">VCCB_Ngân hàng TMCP Bản Việt</option><option value="1000038">KLB_Ngân hàng TMCP Kiên Long</option><option value="1000037">LPB_Ngân hàng TMCP Bưu Điện Liên Việt</option><option value="1000036">OCB_Ngân hàng TMCP Phương Đông</option><option value="1000035">SHB_Ngân hàng TMCP Sài Gòn</option><option value="1000034">HLB_Ngân hàng TNHH MTV Hongleong Việt Nam</option><option value="1000033">VIB_Ngân hàng TMCP Quốc tế Việt Nam</option><option value="1000032">SEAB_Ngân hàng TMCP Đông Nam Á</option><option value="1000031">PBVN_Ngân hàng TBHH MTV Public Việt Nam</option><option value="1000030">BVB_Ngân hàng TMCP Bảo Việt</option><option value="1000029">HDB_Ngân hàng TMCP Phát triển Thành Phố Hồ Chí Minh</option><option value="1000028">VCB_Ngân hàng TMCP Ngoại Thương Việt Nam</option><option value="1000027">IVB_Ngân hàng TNHH Indovia</option><option value="1000026">VIETBANK_Ngân hàng TMCP Thương Tín</option><option value="1000025">VPB_Ngân hàng TMCP Việt Nam Thịnh Vượng</option><option value="1000024">EIB_Ngân hàng TMCP Xuất Nhập Khẩu Việt Nam</option><option value="1000023">PGB_Ngân hàng TMCP Xăng Dầu Petrolimex</option><option value="1000022">SCB_Ngân hàng TMCP Sài Gòn</option><option value="1000021">NAMABANK_Ngân hàng TMCP Nam Á</option><option value="1000020">VAB_Ngân hàng TMCP Việt Á</option><option value="1000019">MSB_Ngân hàng TMCP Hàng Hải</option><option value="1000018">ABB_Ngân hàng TMCP An Bình</option><option value="1000017">SHBVN_Ngân hàng TNHH MTV ShinHan Việt Nam</option><option value="1000016">TPB_Ngân hàng TMCP Tiên Phong</option><option value="1000015">MB_Ngân hàng TMCP Quân Đội</option><option value="1000014">VRB_Ngân hàng Liên doanh Việt Nga</option><option value="1000013">NCB_Ngân hàng TMCP Quốc Dân</option><option value="1000012">BIDV_Ngân hàng TMCP Đầu tư và Phát triển Việt Nam</option><option value="1000011">ACB_Ngân hàng TMCP Á Châu</option><option value="1000010">OJB_Ngân hàng TMCP Đại Dương</option><option value="1000009">PVCOMBANK_Ngân hàng TMCP Đại Chúng Việt Nam</option><option value="1000008">BAB_Ngân hàng TMCP Bắc Á</option><option value="1000007">GPB_Ngân hàng TM TNHH MTV Dầu Khí Toàn Cầu</option><option value="1000006">TCB_Ngân hàng TMCP Kỹ Thương Việt Nam</option><option value="1000005">DONGABANK_Ngân hàng TMCP Đông Á</option><option value="1000004">AGRIBANK_Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam</option><option value="1000002">WOO_Ngân hàng Wooribank</option><option value="1000001">SGB_Ngân hàng TMCP Sài Gòn Công Thương</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 603px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="24" aria-labelledby="select2-BankId-container"><span class="select2-selection__rendered" id="select2-BankId-container" title="Chọn tên ngân hàng">Chọn tên ngân hàng</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                        
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Chi nhánh ngân hàng<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input tabindex="25" type="text" class="form-control register input" name="bankAccount_Branch" id="BankAccountBranch" placeholder="Chi nhánh ngân hàng">
+                                </div>
+                            </div>
+    
+                            <div class="form-group" style="margin-bottom: 0px;">
+                                <label class="control-label control-label-Novatic">Tên chủ tài khoản ngân hàng<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input tabindex="25" type="text" class="form-control register input" name="bankAccount_Own" id="BankAccountOwn" placeholder="Tên chủ tài khoản">
+                                </div>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="showIfCompany" style="display:none;">
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Tên tổ chức<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="text" tabindex="26" class="form-control input" name="name-company" id="reg_company_name" placeholder="Tên doanh nghiệp">
+                                </div>
+                            </div>
+    
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Mã số doanh nghiệp/Mã số thuế<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="number" tabindex="28" class="form-control input" name="tax-code-company" id="reg_company_tax_code" placeholder="Mã số thuế">
+                                </div>
+                            </div>
+    
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Ngày cấp Mã số doanh nghiệp/Mã số thuế<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="date" tabindex="29" class="form-control input" name="date-code-company" id="reg_company_id_date">
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Nơi cấp mã số doanh nghiệp/Mã số thuế<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="text" tabindex="30" class="form-control input" name="place-code-company" id="reg_company_id_place" placeholder="Nơi cấp mã số doanh nghiệp/Mã số thuế">
+                                </div>
+                            </div>
+    
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Địa chỉ tổ chức<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="text" tabindex="31" class="form-control input" name="address-company" id="reg_company_address" placeholder="Địa chỉ doanh nghiệp">
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <label class="control-label control-label-Novatic">Tải lên giấy chứng nhận đăng ký kinh doanh (định dạng .pdf, .doc, .docx)<span style="color:red"> *</span></label>
+                                <div class="input-wrap">
+                                    <input type="file" onchange="UploadCompanyFile(event)" tabindex="32" class="form-control input" name="fileupload-company" id="reg_company_file">
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div class="form-group">
+                            <div class="input-wrap" style="padding-bottom:6px;font-size: 14px;">
+                                <input type="checkbox" tabindex="33" class="input " id="checkboxRegister" style="width:20px;height:20px">
+                                Tôi cam kết tuân thủ
+                                <a style="color:#b41712" href="https://drive.google.com/drive/folders/1qV8rJr6sRUeM55ijDsxpPYUJwQ8UKweo?usp=sharing" target="_blank">Quyền và trách nhiệm của khách tham gia đấu giá</a>,
+                                <a style="color:#b41712" href="https://drive.google.com/drive/folders/1NFIqghij9Mk6BsOrTBbtesx7-xeslAk1?usp=sharing" target="_blank">Chính sách bảo mật thông tin khách hàng</a>,
+                                <a style="color:#b41712" href="https://drive.google.com/drive/folders/1oSLhYQCz9AJxlD6QqqmG2x5QFpcNSIwb?usp=sharing" target="_blank">Cơ chế giải quyết tranh chấp</a>,
+                                <a style="color:#b41712" href="https://drive.google.com/drive/folders/1RGAjjAUiIa9612_9VFwP9SqLLawe5RdV?usp=sharing" target="_blank">Quy chế hoạt động</a>
+                                tại website đấu giá trực tuyến <span style="color:#b41712">lacvietauction.vn</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrap">
+                                <button tabindex="34" style="margin-bottom: 20px !important;width: 180px;float:right" type="submit" id="register_popup_submit" class="btn btn-info btn-block btn-register-submit Novatic-login" onclick="Register()">Đăng ký tài khoản</button>
+                            </div>
+                        </div>
                     </div>
-                </table>
-            </form>
-        </main>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div> -->
         <footer>
 
             <div class="container">
@@ -483,20 +984,6 @@
                 <!--Kết Thúc Nội Dung Liên Hệ-->
             </div>
             
-            <!-- Date-time -->
-            <div class="time-part">
-                <i style="margin-right: 4px;" class="far fa-clock"></i>
-                <label id='time'>
-                    <script>date_time(); //goi ham
-                    </script>
-                </label>
-            </div>
-            
-            
-            <!-- Back-Top -->
-            <div id="backtop">
-                <i class="fas fa-chevron-circle-up"></i>
-            </div>
     
         </footer>
     <script src="js/jquery-3.6.0.js"></script>
@@ -505,25 +992,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/header.js"></script>
-
-    <!-- Back-Top -->
-    <script>
-        $(document).ready(function(){
-            $(window).scroll(function(){
-                if($(this).scrollTop()){
-                    $('#backtop').fadeIn();
-                }else{
-                    $('#backtop').fadeOut();
-                }
-            });
-            $('#backtop').click(function(){
-            $('html, body').animate({
-                scrollTop: 0
-            }, 500);
-            });
-        });
-        
-    </script>
-
+   
 </body>
 </html>
