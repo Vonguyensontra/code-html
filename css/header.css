@@ -223,13 +223,13 @@ body {
     box-sizing: border-box;
     font-family: Roboto;
 }
-
-.container_dentail{
+.container_category{
     float: left;
     width: 90%;
     height: 500px;
-    background: linear-gradient(to right,rgb(245, 223, 223),rgb(174, 202, 17));
+    background: linear-gradient(to right,red,blue);
 }
+
 footer{
     clear: both;
      position: relative;
