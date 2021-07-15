@@ -5,7 +5,7 @@ html {
 body {
     min-height: 100%;
     margin:0;
-    background-color: #fafafa;
+   
   }
 .tabar{
     background-color: 	#242438;
@@ -528,6 +528,7 @@ header{
      border: 2px solid #000;
      box-sizing: border-box;
      transition: 0.5s;
+     transform: translate(-50%,-50%);
     left: 100px;
   }
   .btn123:before{
