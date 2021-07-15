@@ -519,7 +519,7 @@ header{
       left: 620px;
   }
 
-  
+
   /* khuc nay */
   .btn123{
     position: relative;
@@ -536,8 +536,7 @@ header{
   .btn123:before{
     content: '';
     position: absolute;
-    top: 0;
-    left:0;
+    
     width: 50%;
     height: 100%;
     background: #000;
@@ -555,8 +554,7 @@ header{
   .btn123:after{
     content: '';
     position: absolute;
-    top: 0;
-    right:0;
+   
     width: 50%;
     height: 100%;
     background: #000;
