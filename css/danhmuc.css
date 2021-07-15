@@ -1,7 +1,7 @@
 .container_dentails{
     margin: 5%;
     float: left;
-    width: 90%;
+    width: 90.65%;
     height: 450px;
 }
 .container_dentails a{
@@ -116,18 +116,6 @@ li{
     font-weight: 700;
     font-size: 18px;
 }
-/* .tiltle_dentail h5,a{
-    color: black !important;
-    white-space: normal; 
-    font-size: 18px;
-    text-decoration: none !important;
-    overflow: hidden ;
-    text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-} */
-
 
 .container_category{
     margin: auto;
