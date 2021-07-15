@@ -518,6 +518,9 @@ header{
       top: 290px;
       left: 620px;
   }
+
+  
+  /* khuc nay */
   .btn123{
     position: relative;
      padding: 15px 30px;
@@ -570,7 +573,10 @@ header{
 .btn123:hover{
     color:#fff;
 }
-  
+/* toi khuc nay hieu oi   */
+
+
+
   /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
