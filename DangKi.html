@@ -132,7 +132,7 @@
                 </div>
                
             </div>
-            <div class="bgmenubar">
+            <div class="bgmenubar sticky" style="z-index: 0;">
                 <div class="menubar">
                     <div class="dropdown">
                         <button onclick="myFunction()" class="dropbtn"><svg class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản phẩm</button>
@@ -451,8 +451,9 @@
                 <div class="noi-dung links">
                     <h2>Đường Dẫn</h2>
                     <ul>
-                        <li><a href="#">Trang Chủ</a></li>
-                        <li><a href="#">Liên hệ bán hàng</a></li>
+                        <li><a href="danhmuc.html">Trang Chủ</a></li>
+                        <li><a href="DanhMucSanPham.html">Cuộc đấu giá</a></li>
+                        <li><a href="LienHeBanDauGia.html">Liên hệ bán hàng</a></li>
                     </ul>
                 </div>
                 <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -463,7 +464,7 @@
                         <li>
                             <span><i class="fa fa-map-marker"></i></span>
                             <span>Nam Kì Khởi Nghĩa<br />
-                                Fsoft, Thành Phố Đà Nẵng<br />
+                                Thành Phố Đà Nẵng<br />
                                 Việt Nam</span>
                         </li>
                         <li>
@@ -499,6 +500,20 @@
             </div>
     
         </footer>
+
+        <!-- JS Login -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

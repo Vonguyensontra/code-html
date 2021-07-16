@@ -24,6 +24,7 @@
             color: gray;
         }
         .time-part{
+            z-index: 3;
             background-color: #f7921a; 
             color: white;
             font-size: 19px;
@@ -99,12 +100,167 @@
                         <a href="" class="margin iconcolor hovericon"><i class="fab fa-youtube"></i></a>
                     </div>
                     <div class="thetrang col-6 "></div>
-                    <div class="login">
-                        <a href="dangnhap.html" class="mr-4 textcolor hover"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng
-                            nhập</a>
-                        <a href="DangKi.html" class="mr-0 pr-0 textcolor hover"><i
-                                class="fas fa-user-plus iconcolor mr-2"></i>Đăng kí</a>
+                    <!-- Col Đăng nhập - Đăng ký -->
+                <div class="col-4 col-login">
+                    <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng Nhập</button>
+                    <button class="btn-login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i
+                        class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                          <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="img/logo.png" alt="Avatar" class="avatar">
+                          </div>
+                      
+                          <div class="container">
+                            <label for="uname"><b>Tên đăng nhập/ Email</b></label>
+                            <input type="textlogin" placeholder="Nhập Email hoặc Tên dăng nhập" name="uname" required>
+                      
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input type="passwordlogin" placeholder="Nhập mật khẩu" name="psw" required>
+                              
+                            <label class="d-block">
+                              <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                            </label>
+							<button type="button" class="btn btn-primary p-2">Đăng nhập</button>
+                          </div>
+                      
+                          <div class="container" style="background-color:#f1f1f1">
+                            <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
+                            <span class="psw">Quên mật khẩu? nhấn vào <a href="#">đây!</a></span>
+                          </div>
+                        </form>
                     </div>
+                    <!-- CSS Login -->
+                    <style>
+                        body {font-family: Arial, Helvetica, sans-serif;}
+                        
+                        /* Full-width input fields */
+                        input[type=textlogin], input[type=passwordlogin] {
+                          width: 100%;
+                          padding: 12px 20px;
+                          margin: 8px 0;
+                          display: inline-block;
+                          border: 1px solid #ccc;
+                          box-sizing: border-box;
+                        }
+                        
+                        /* Set a style for all buttons */
+                        .btn-login{
+                          background-color: #242438;
+                          color: white;
+                          padding: auto;
+                          margin: 8px 0;
+                          border: none;
+                          cursor: pointer;
+                          width: auto;
+                          padding-left: 10px;
+                          padding-right: 10px;
+                        }
+                        
+                        .btn-login:hover {
+                          opacity: 0.8;
+                        }
+                        
+                        /* Extra styles for the cancel button */
+                        .cancelbtn {
+                          width: auto;
+                          padding: 10px 18px;
+                          background-color: #f44336;
+                        }
+                        
+                        /* Center the image and position the close button */
+                        .imgcontainer {
+                          text-align: center;
+                          margin: 24px 0 12px 0;
+                          position: relative;
+                        }
+                        
+                        img.avatar {
+                          width: 40%;
+                          border-radius: 50%;
+                        }
+                        
+                        .container {
+                          padding: 16px;
+                        }
+                        
+                        span.psw {
+                          padding-top: 16px;
+                        }
+                        
+                        /* The Modal (background) */
+                        .modal {
+                          display: none; /* Hidden by default */
+                          position: fixed; /* Stay in place */
+                          z-index: 1; /* Sit on top */
+                          left: 0;
+                          top: 0;
+                          width: 100%; /* Full width */
+                          height: 100%; /* Full height */
+                          overflow: auto; /* Enable scroll if needed */
+                          background-color: rgb(0,0,0); /* Fallback color */
+                          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                          padding-top: 60px;
+                        }
+                        
+                        /* Modal Content/Box */
+                        .modal-content {
+                          background-color: #fefefe;
+                          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                          border: 1px solid #888;
+                          width: 900px; /* Could be more or less, depending on screen size */
+                        }
+                        
+                        /* The Close Button (x) */
+                        .close {
+                          position: absolute;
+                          right: 25px;
+                          top: 0;
+                          color: #000;
+                          font-size: 35px;
+                          font-weight: bold;
+                        }
+                        
+                        .close:hover,
+                        .close:focus {
+                          color: red;
+                          cursor: pointer;
+                        }
+                        
+                        /* Add Zoom Animation */
+                        .animate {
+                          -webkit-animation: animatezoom 0.6s;
+                          animation: animatezoom 0.6s
+                        }
+                        
+                        @-webkit-keyframes animatezoom {
+                          from {-webkit-transform: scale(0)} 
+                          to {-webkit-transform: scale(1)}
+                        }
+                          
+                        @keyframes animatezoom {
+                          from {transform: scale(0)} 
+                          to {transform: scale(1)}
+                        }
+                        
+                        /* Change styles for span and cancel button on extra small screens */
+                        @media screen and (max-width: 300px) {
+                          span.psw {
+                             display: block;
+                             float: none;
+                          }
+                          .cancelbtn {
+                             width: 100%;
+                          }
+                        }
+						.btn-primary {
+							color: #fff;
+							background-color: #007bff;
+							border-color: #007bff;
+						}
+                    </style>
+                </div>
                 </div>
 
             </div>
@@ -268,14 +424,14 @@
                         <div class="form_pro">
                         <p class="h123">Tài Sản Công</p>
                         <div class="soluongtaisan">Tài sản(10)</div>
-                        <a href="#" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
+                        <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
                         </div>
                     </div>
                     <div class="xeco sixcategory">
                         <div class="form_pro">
                         <p class="h123">Xe Cộ</p>
                         <div class="soluongtaisan">Tài sản(10)</div>
-                        <a href="#" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
+                        <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
                     </div>
                 </div>
                 </div>
@@ -283,7 +439,7 @@
                     <div class="form_pro">
                     <p class="h123">Nghệ Thuật</p>
                     <div class="soluongtaisan">Tài sản(10)</div>
-                    <a href="#" class="btnz btn-white btn-animate twobutton">Xem thêm</a>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate twobutton">Xem thêm</a>
                 </div>
             </div>
             </div>
@@ -292,7 +448,7 @@
                     <div class="form_pro">
                     <p class="h123">Bất Động Sản</p>
                         <div class="soluongtaisan">Tài sản(10)</div>
-                        <a href="#" class="btnz btn-white btn-animate twobutton">Xem thêm</a>
+                        <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate twobutton">Xem thêm</a>
                 </div>
             </div>
                 <div class="bottom_right_category">
@@ -300,14 +456,14 @@
                         <div class="form_pro">
                         <p class="h123">Hàng Xa Xỉ</p>
                         <div class="soluongtaisan">Tài sản(10)</div>
-                        <a href="#" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
+                        <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
                     </div>
                 </div>
                     <div class="taisankhac sixcategory">
                         <div class="form_pro">
                         <p class="h123">Tài Sản Khác</p>
                         <div class="soluongtaisan">Tài sản(10)</div>
-                        <a href="#" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
+                        <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate fourbutton">Xem thêm</a>
                     </div>
                 </div>
                 </div>
@@ -317,13 +473,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -334,13 +490,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -360,13 +516,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -386,13 +542,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -412,13 +568,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -441,13 +597,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -458,13 +614,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -484,13 +640,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -510,13 +666,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -536,13 +692,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -565,13 +721,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -582,13 +738,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -608,13 +764,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -634,13 +790,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -660,13 +816,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -689,13 +845,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -706,13 +862,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -732,13 +888,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -758,13 +914,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -784,13 +940,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -813,13 +969,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -830,13 +986,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -856,13 +1012,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -882,13 +1038,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -908,13 +1064,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -937,13 +1093,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -954,13 +1110,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -980,13 +1136,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1006,13 +1162,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1032,13 +1188,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1061,13 +1217,13 @@
         <div class="container_dentails">
             <div class="left_container_de" style="background: url(img/tui-xach-hermes-chinh-hang-1.17.png);">
                 <div class="categoryitem">
-                    <a href="#">
+                    <a href="DanhMucSanPham.html">
                         <span class="cate_name">Sưu Tầm-Nghệ Thuật</span>
                     </a>
                 </div>
                 <span class="count">Tài Sản (9)</span>
                 <div class="categorybutton">
-                    <a href="#" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
+                    <a href="DanhMucSanPham.html" class="btnz btn-white btn-animate button" title="Xem Tất Cả"><span>
                         Xem Tất Cả
                         </span>
                     </a>
@@ -1078,13 +1234,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/ve-dep-12-con-giap-tren-tem-viet-nam-va-the-gioi.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1104,13 +1260,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/xe.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1130,13 +1286,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/painting.jpg" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1156,13 +1312,13 @@
                     <li class="information_product1">
                         <div class="product_wrapper">
                             <div class="thumbnail_dentail">
-                                <a href="#">
+                                <a href="DaugiaInfo.html">
                                     <img class="img_act" src="img/tui-xach-hermes-chinh-hang-1.17.png" alt="">
                                 </a>
                             </div>
                             <div class="tiltle_dentail">
                                 <h3 class="active_product_title">
-                                    <a href="#" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
+                                    <a href="DaugiaInfo.html" class="ellipsis2">Đấu giá tác phẩm nghệ thuật Phía sau cổng làng</a>
                                 </h3>
                                 <div class="dentail_product">
                                     <span class="ellipsits2">Chủ tài sản: Công ty đấu giá hợp danh Lạc Việt</span>
@@ -1202,8 +1358,9 @@
             <div class="noi-dung links">
                 <h2>Đường Dẫn</h2>
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Liên hệ bán hàng</a></li>
+                    <li><a href="danhmuc.html">Trang Chủ</a></li>
+                    <li><a href="DanhMucSanPham.html">Cuộc đấu giá</a></li>
+                    <li><a href="LienHeBanDauGia.html">Liên hệ bán hàng</a></li>
                 </ul>
             </div>
             <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -1214,7 +1371,7 @@
                     <li>
                         <span><i class="fa fa-map-marker"></i></span>
                         <span>Nam Kì Khởi Nghĩa<br />
-                            Fsoft, Thành Phố Đà Nẵng<br />
+                            Thành Phố Đà Nẵng<br />
                             Việt Nam</span>
                     </li>
                     <li>
@@ -1252,6 +1409,19 @@
     </footer>
     <!-- Footer -->
 
+    <!-- JS Login -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
