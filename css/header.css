@@ -223,8 +223,18 @@ body {
     box-sizing: border-box;
     font-family: Roboto;
 }
-
-
+.container_category{
+    float: left;
+    width: 90%;
+    height: 500px;
+    background: linear-gradient(to right,red,blue);
+}
+.container_dentail{
+    float: left;
+    width: 90%;
+    height: 500px;
+    background: linear-gradient(to right,rgb(245, 223, 223),rgb(174, 202, 17));
+}
 footer{
     clear: both;
      position: relative;
@@ -680,6 +690,5 @@ header{
     top: 750px;
     z-index: 3;
 }
-
 
 
