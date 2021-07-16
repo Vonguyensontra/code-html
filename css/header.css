@@ -88,11 +88,11 @@ body {
     display: flex;
     margin-top: 35px; 
 }
-.input{
+ .input{ 
     width: 380px;
-    height: 100%;
-    border: none;
-    outline:none;
+    height: 80%;
+    border: none !important;
+    outline:none !important;
     background-color: #DDDDDD;
     border-top-right-radius: 5px;
 }
