@@ -246,9 +246,8 @@ li{
 .btnz:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f7921a;
+    
     color: white;
-    border: 1px solid #f7921a;
 }
 
 .btnz:active {
@@ -275,7 +274,7 @@ li{
 }
 
 .btn-white::after {
-    background-color: #f7921a;
+   
     
 }
 
