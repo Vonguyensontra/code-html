@@ -1,5 +1,5 @@
 .container_dentails{
-    margin: 5%;
+    margin: 5% 5% 1.5% 5%;
     float: left;
     width: 90.65%;
     height: 450px;
@@ -306,13 +306,13 @@ li{
 /* ket thuc btnz */
 
 .container_category{
-    margin: auto;
+    margin-left: 5%;
+    float: left;
     width: 90%;
- 
     height: 600px;
-    display: block;
-    color: white;
+   
 }
+
 .sixcategory{
    padding-left: 20px;
    padding-top: 20px;
