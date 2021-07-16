@@ -524,7 +524,7 @@ a{
 }
 html {
     height: 100%;
-    font-family: Roboto;
+    
   }
 body {
     min-height: 100%;
@@ -739,7 +739,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto;
+   
 }
 footer{
     margin-top: 50px;
