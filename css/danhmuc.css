@@ -1,5 +1,8 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
 .container_dentails{
-    margin: 5%;
+    margin: 5% 5% 1.5% 5%;
     float: left;
     width: 90.65%;
     height: 450px;
@@ -37,7 +40,7 @@
     color: white;
     border: 1px solid white ;
     border-radius: 30px;
-    padding: 14px 25px;
+    padding: 14px 30px;
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -91,7 +94,7 @@ li{
     float: right;
     width: 55%;
     height: 100%;   
-    
+    font-size: 14px;
 }
 .tiltle_dentail h3{
     padding-top: 4%;
@@ -115,7 +118,7 @@ li{
 .price{
     color: red;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .container_category{
@@ -133,13 +136,14 @@ li{
 .left_category{
     width: 49.6%;
     height: 100%;
-    
+
     float: left;
-    
+   
 }
 .right_category{
     width: 49.6%;
     height: 100%;
+
     float: right;
 }
 .top_left_category{
@@ -156,28 +160,31 @@ li{
     background-repeat: no-repeat; 
     background-size: 100% 100%;   
 }
-/* 
+
 .taisancong:hover{
     border: 1px solid rgb(191, 192, 192);
     transition: ease-out cubic-bezier(10%, 10.5%, 10%, 20%);
-} */
+}
 .form_pro:hover{
-    margin: -1%;
-    width: 96%;
-    height: 98%;  
+    width: 95%;
+    height: 94%;  
     border: 1px solid #4195fc; /* some kind of blue border */
+
     /* other CSS styles */
+
     /* round the corners */
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
             border-radius: 4px;
+
+
     /* make it glow! */
     -webkit-box-shadow: 0px 0px 4px #4195fc;
        -moz-box-shadow: 0px 0px 4px #4195fc;
             box-shadow: 0px 0px 4px #4195fc; /* some variation of blue for the shadow */
     -webkit-transition: width 2s; /* Safari */
-    transition: width 10    s;
-    /* transition: ease-out 0.1s; */
+    transition: width 2s;
+    transition: ease-out 0.3s;
 }
 .xeco{
     width: 49.1%;
@@ -239,15 +246,15 @@ li{
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
+    position: absolute;
 }
-.container_category image:hover {
-    filter: brightness(50%);
-}
+
 .btnz:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    
+    background-color: #f7921a;
     color: white;
+    border: 1px solid #f7921a;
 }
 
 .btnz:active {
@@ -274,7 +281,7 @@ li{
 }
 
 .btn-white::after {
-   
+    background-color: #f7921a;
     
 }
 
@@ -307,32 +314,34 @@ li{
     float: left;
     width: 90%;
     height: 600px;
+   
 }
 
 .sixcategory{
-   
-   padding-left: 3.5%;
-   padding-top: 2.5%;
-   
+   padding-left: 3%;
+   padding-top: 2%;
 }
 
 .h123{
+    font-weight: 900;
   padding-bottom: 0px;
   font-size: 35px;
-  padding: 0;
-  margin-left: 4%;
-  
+  padding-left: 5%;
+  padding-top: 5%;
 }
 .soluongtaisan{
     margin-top: -25px;
-    margin-left: 5%;
-   
+    padding-left: 6%;
+    padding-top: 2%;
 }
 .fourbutton{
-    margin-top: 15px;
-    margin-left: 5%;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10%;
+    
 }
 .twobutton{
-    margin-top: 20px;
-    margin-left: 5%;
+    margin-top: 15px;
+    padding-left: 5%;
+    margin-left: 2%;
 }
