@@ -16,10 +16,12 @@ header{
     height: 100%;
     /* background-color: tomato; */
     padding-left: 50px;
+    background: #f8f8f8;
 }
 .bg-cl-c{
     padding-left: 12px;
     height: 100%;
+    background: #f8f8f8;
     /* background-color: rgb(231, 211, 207); */
 }
 .col-img{
@@ -460,6 +462,7 @@ a {
 }
 .product-description{
   margin-bottom: -.2em;
+  margin-top: 10px;
 }
 .item-page-column-secondary-value .description{
   margin-top: 5px;
