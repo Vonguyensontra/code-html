@@ -33,7 +33,7 @@ body{
         padding-right: 30px;
         padding-bottom: 85px;
         padding-left: 30px;
-        margin-top: 120px;
+        margin-top: 10%;
     }
 
     .bg-inf {
@@ -68,8 +68,8 @@ body{
     background-color: #f7921a;
     height: 54%;
     width: 22%;
-    margin-top: -520px;
-    margin-left: 120px;
+    margin-top: -30%;
+    margin-left: 10%;
     }
     footer{
         margin-top: 90px;
