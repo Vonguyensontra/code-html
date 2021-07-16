@@ -1,5 +1,5 @@
 .container_dentails{
-    margin: 5% 5% 1.5% 5%;
+    margin: 5%;
     float: left;
     width: 90.65%;
     height: 450px;
@@ -240,13 +240,14 @@ li{
     border-radius: 100px;
     transition: all .2s;
 }
-
+.container_category image:hover {
+    filter: brightness(50%);
+}
 .btnz:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f7921a;
+    
     color: white;
-    border: 1px solid #f7921a;
 }
 
 .btnz:active {
@@ -273,7 +274,7 @@ li{
 }
 
 .btn-white::after {
-    background-color: #f7921a;
+   
     
 }
 
