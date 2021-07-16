@@ -1,0 +1,513 @@
+html {
+    height: 100%;
+    font-family: Roboto;
+  }
+body {
+    min-height: 100%;
+  }
+ 
+.xtabar{
+    background-color: 	#242438;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+}
+.xcontainer1{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    
+
+}
+.xminitabar{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    
+    height: 100%;
+}
+.xsocialnetwork{
+   
+    display: flex;
+    width: 100%;
+    
+}
+.xmargin{
+    margin: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.xlogin{
+    margin: auto;
+    display: flex;
+}
+.xheader {
+    background: white;
+    height: 120px;
+    width: 80%;
+    margin: auto;
+    
+    
+}
+
+.xiconcolor{
+    color: #f7921a;
+    font-size: 16px;
+   font-family: inherit;
+    
+}
+.xtextcolor{
+    color: white;
+   font-size: 16px;
+   font-family: inherit;
+}
+.xhover:hover{
+    color: white;
+     text-decoration: none;
+}
+.xhovericon:hover{
+    color: yellow;
+  
+}
+.xlogo{    
+    height: 120px;;
+    margin-left: 3px;
+ 
+    position: relative;
+}
+.xminisearch{
+    height: 100%;
+    background-color: 	#DDDDDD;
+    width: 200px;
+    border-top-left-radius:  20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid black;
+}
+.xsearch{
+    height: 40px;
+    display: flex;
+    margin-top: 35px;
+    
+}
+.xinput{
+    width: 380px;
+    height: 100%;
+    border: none;
+    outline:none;
+    background-color: #DDDDDD;
+    border-top-right-radius: 5px;
+}
+.xlist{
+    background-color: 	#DDDDDD;
+    border: none;
+    outline:none;
+    margin-top: 7px;
+    padding-left: 17px;
+    border-top-left-radius:  20px;
+    border-bottom-left-radius: 20px;
+    font-size: 16px;
+}
+.xiconsearch{
+    background: #484848;
+    border: 2px solid #484848;
+    line-height: 39px;
+    padding: 0;
+    border-radius: 30px;
+    padding-right: 11px;
+    padding-left: 11px;
+    height: 42px;
+    position: absolute;
+    right: 2px;  
+    
+    padding-bottom: 11px;
+   
+}
+.xiconsearch:hover{
+    background-color: #f7921a;
+   
+}
+.xform-control:focus{
+    outline: 0 !important;
+    
+}
+
+.xmenubar{
+    background-color: #f7921a;
+    height: 68px;
+
+    padding-top: 12px;
+    padding-left: 145px;
+    font-weight: bold;
+    display: flex;
+    position: relative;
+   
+    width: 100%;
+}
+.xdropbtn {
+  
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: 0 !important;
+  
+}
+
+.xdropbtn:hover, .xdropbtn:focus {
+  background-color: black;
+  color: white;
+}
+.xdropbtn1{
+    padding: .5rem 1rem;
+    font-size: 16px;
+    border: none;
+    background-color: #f7921a;
+    cursor: pointer;
+    font-weight: bold;
+    outline: 0 !important;
+    color: white;
+}
+.xdropbtn1:hover{
+    background-color: black;
+    color: white;
+}
+.xdropdown {
+  position: relative;
+  float: left;
+  
+  
+}
+.xdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.x2);
+  z-index: 1;
+}
+.xdropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+.xdropdown-content a:hover {
+    color: black;
+    text-decoration: none ;
+    background-color: #ddd
+}
+.xshow {display:block;}
+.xlinknav:hover{
+    background-color: black;
+    height: 44px;
+    color: white;
+}
+.xlinknav{
+    height: 44px;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.xlink1{
+  padding-bottom: 4px;
+  
+}
+.xcontactous{
+    position: absolute;
+    height: 100%;
+    right: 20px;
+    top: 0;
+    padding-right: 135px;
+}
+
+.xemail{
+    display: flex;
+    padding-top: 8px;
+    line-height: 8px;
+}
+.xphone{
+    margin-top: 0;
+    display: flex;
+}
+.xiconemail{
+    font-size: 20px;
+    color: black;
+    margin-right: 10px;
+}
+.xtextemail{
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+ 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+footer{
+     position: relative;
+     width: 100%;
+     height: auto;
+     padding: 50px 100px;
+     background: #242438;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+
+
+
+ 
+footer .container{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     flex-direction: row;
+     max-width: 1140px;
+ }
+
+/*Thiết Lập Cho Thành Phần Nội Dung Giới Thiệu*/
+ footer .container .xnoi-dung{
+     margin-right: 30px;
+ }
+footer .container .xnoi-dung.xabout{
+     width:40%;
+ }
+ footer .container .xnoi-dung.xabout h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+ footer .container .xnoi-dung.xabout h2:before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background:#f7921a;
+ }
+footer .container .xnoi-dung.xabout p{
+     color: #999;
+ }
+ /*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
+ .xsocial-icon{
+     margin-top: 20px;
+     display: flex;
+ }
+.xsocial-icon li {
+     list-style: none;
+ }
+ .xsocial-icon li a{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     background: #222;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 10px;
+     text-decoration: none;
+     border-radius: 4px;
+ }
+.xsocial-icon li a:hover{
+     background:#f7921a;
+ }
+.xsocial-icon li a .xfa{
+     color: #fff;
+     font-size: 20px;
+ }
+.xlinks h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+
+.xlinks h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.xlinks h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f7921a;
+ }
+.xlinks{
+    position: relative;
+    width: 25%;
+ }
+ .xlinks ul li{
+     list-style: none;
+ }
+ .xlinks ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+.xlinks ul li a:hover{
+     color: #fff;
+ }
+
+.xcontact h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.xcontact h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f7921a;
+ }
+.xcontact{
+     width: calc(35% - 60px);
+     margin-right: 0 !important;
+ }
+.xcontact .xinfo{
+     position: relative;
+ }
+ .xcontact .xinfo li{
+     display: flex;
+     margin-bottom: 16px;
+ }
+ .xcontact .xinfo li span:nth-child(1) {
+     color: #fff;
+     font-size: 20px;
+     margin-right: 10px;
+ }
+.xcontact .xinfo li span{
+     color: #999;
+ }
+.xcontact .xinfo li a{
+     color: #999;
+     text-decoration: none;
+ }
+ .xbtn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-top:16px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.xbtn--primary {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 8px 24px;
+}
+.xbtn--primary:hover {
+    background: #f7921a;
+}
+.xbtn--primary:active {
+    background: #f7921a;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.xform__field {
+    width: 90%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 8px 4px;
+}
+@media  (max-width: 768px){
+    footer{
+        padding: 40px;
+             }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .xnoi-dung{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container, .xnoi-dung.xabout, .xlinks, .xcontact{
+        width: 100%;
+    }
+}
+.coins {
+    background: none;
+    margin-right: 30px;
+    margin-left: 8px;
+}
+.xthongtin{
+    background: none;
+}
+.xuser{
+    color: white;
+    background: none;
+    padding: 0;
+}
+.xuser:hover{
+    background: none;
+}
+.xdropbtna {
+   
+    color: white;
+    
+    font-size: 16px;
+    border: none;
+  }
+  
+  
+  .xdropdowna {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .xdropdown-contenta {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.x2);
+    z-index: 1;
+    font-size: 13px;
+    
+  }
+  
+  
+  .xdropdown-contenta a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+ 
+  .xdropdown-contenta a:hover {background-color: #ddd;text-decoration: none;}
+  
+  
+  .xdropdowna:hover .xdropdown-contenta {display: block;}
+  
