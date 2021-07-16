@@ -1,31 +1,26 @@
 body{
     margin:0;
-    background-color: #fafafa;
 }
-.bg{
-    background-color: #efefef;
-}
+
 .form-area{
     width: auto;
     height: auto;
     margin: 0 auto;
     padding: 0.5rem;
-    background-color: white;
+    background-color: #efefef;
 }
 
-#btn{
+#btn-bg{
     color: #fff;
     border-radius: 30px;
     background-color: #f7921a;
     color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    position: absolute;
     text-transform: uppercase;
 }
 
-#btn:hover{
+#btn-bg:hover{
     background-color: #efefef;
     color: black;
     border: 1px solid lightgray;
@@ -38,15 +33,18 @@ body{
         padding-right: 30px;
         padding-bottom: 85px;
         padding-left: 30px;
-        margin-top: -200px;
+        margin-top: 120px;
     }
 
     .bg-inf {
+        color: #fff;
         background-color: #f7921a;
         padding-bottom: 50px;
         padding-left: 40px;
         margin-top: 90px;
         padding-top: 120px;
+        height: 300px;
+        width: 85%;
         
     }
     footer{
@@ -64,13 +62,14 @@ body{
     }
 
     .bg-inf {
+    color: #fff;
     display: block;
     position: absolute;
     background-color: #f7921a;
     height: 54%;
     width: 22%;
-    margin-top: -495px;
-    margin-left: 100px;
+    margin-top: -520px;
+    margin-left: 120px;
     }
     footer{
         margin-top: 90px;
