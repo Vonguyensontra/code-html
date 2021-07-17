@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/header.css">
 
     <style>
-        #backtop{
+        #backtop {
             font-size: 40px;
             color: #f7921a;
             position: fixed;
@@ -22,11 +22,13 @@
             right: 20px;
             cursor: pointer;
         }
-        #backtop:hover{
+
+        #backtop:hover {
             color: gray;
         }
-        .time-part{
-            background-color: #f7921a; 
+
+        .time-part {
+            background-color: #f7921a;
             color: white;
             font-size: 19px;
             position: fixed;
@@ -38,13 +40,13 @@
     </style>
 
     <script>
-        function date_time(){
+        function date_time() {
             var today = new Date(); //lay ngay gio hien tai
             var gio = today.getHours(); //lay gio hien tai
             var phut = today.getMinutes(); //lay phut hien tai
             var giay = today.getSeconds();
             //cap nhat thoi gian sau moi giay
-            setTimeout("date_time()",1000); //cu sau 1 giay ta goi 
+            setTimeout("date_time()", 1000); //cu sau 1 giay ta goi 
 
             //ngay thang nam
             var x = new Date();
@@ -57,28 +59,28 @@
             var year = x.getFullYear();
             // Lấy tên thứ của ngày hiện tại
             switch (current_day) {
-            case 0:
-                day_name = "CHỦ NHẬT";
-                break;
-            case 1:
-                day_name = "THỨ HAI";
-                break;
-            case 2:
-                day_name = "THỨ BA";
-                break;
-            case 3:
-                day_name = "THỨ TƯ";
-                break;
-            case 4:
-                day_name = "THỨ NĂM";
-                break;
-            case 5:
-                day_name = "THỨ SÁU";
-                break;
-            case 6:
-                day_name = "THỨ BẢY";
+                case 0:
+                    day_name = "CHỦ NHẬT";
+                    break;
+                case 1:
+                    day_name = "THỨ HAI";
+                    break;
+                case 2:
+                    day_name = "THỨ BA";
+                    break;
+                case 3:
+                    day_name = "THỨ TƯ";
+                    break;
+                case 4:
+                    day_name = "THỨ NĂM";
+                    break;
+                case 5:
+                    day_name = "THỨ SÁU";
+                    break;
+                case 6:
+                    day_name = "THỨ BẢY";
             }
-            
+
             //truy cap vao id time, dan text thongtin
             document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
         }
@@ -101,166 +103,194 @@
                     </div>
                     <div class="thetrang col-6 "></div>
                     <!-- Col Đăng nhập - Đăng ký -->
-                <div class="col-4 col-login">
-                    <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng Nhập</button>
-                    <button class="btn-login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i
-                        class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button>
-                    <div id="id01" class="modal">
-                        <form class="modal-content animate" action="/action_page.php" method="post">
-                          <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <img src="img/logo.png" alt="Avatar" class="avatar">
-                          </div>
-                      
-                          <div class="container">
-                            <label for="uname"><b>Tên đăng nhập/ Email</b></label>
-                            <input type="textlogin" placeholder="Nhập Email hoặc Tên dăng nhập" name="uname" required>
-                      
-                            <label for="psw"><b>Mật khẩu</b></label>
-                            <input type="passwordlogin" placeholder="Nhập mật khẩu" name="psw" required>
-                              
-                            <label class="d-block">
-                              <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
-                            </label>
-							<button type="button" class="btn btn-primary p-2">Đăng nhập</button>
-                          </div>
-                      
-                          <div class="container" style="background-color:#f1f1f1">
-                            <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
-                            <span class="psw">Quên mật khẩu? nhấn vào <a href="#">đây!</a></span>
-                          </div>
-                        </form>
+                    <div class="col-4 col-login">
+                        <button class="btn-login" onclick="document.getElementById('id01').style.display='block'"
+                            style="width:auto;"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng Nhập</button>
+                        <button class="btn-login" onclick="document.getElementById('id02').style.display='block'"
+                            style="width:auto;"><i class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button>
+                        <div id="id01" class="modal">
+                            <form class="modal-content animate" action="/action_page.php" method="post">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                        title="Close Modal">&times;</span>
+                                    <img src="img/logo.png" alt="Avatar" class="avatar">
+                                </div>
+
+                                <div class="container">
+                                    <label for="uname"><b>Tên đăng nhập/ Email</b></label>
+                                    <input type="textlogin" placeholder="Nhập Email hoặc Tên dăng nhập" name="uname"
+                                        required>
+
+                                    <label for="psw"><b>Mật khẩu</b></label>
+                                    <input type="passwordlogin" placeholder="Nhập mật khẩu" name="psw" required>
+
+                                    <label class="d-block">
+                                        <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+                                    </label>
+                                    <button type="button" class="btn btn-primary p-2">Đăng nhập</button>
+                                </div>
+
+                                <div class="container" style="background-color:#f1f1f1">
+                                    <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
+                                    <span class="psw">Quên mật khẩu? nhấn vào <a href="#">đây!</a></span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- CSS Login -->
+                        <style>
+                            body {
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+
+                            /* Full-width input fields */
+                            input[type=textlogin],
+                            input[type=passwordlogin] {
+                                width: 100%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                display: inline-block;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                            }
+
+                            /* Set a style for all buttons */
+                            .btn-login {
+                                background-color: #242438;
+                                color: white;
+                                padding: auto;
+                                margin: 8px 0;
+                                border: none;
+                                cursor: pointer;
+                                width: auto;
+                                padding-left: 10px;
+                                padding-right: 10px;
+                            }
+
+                            .btn-login:hover {
+                                opacity: 0.8;
+                            }
+
+                            /* Extra styles for the cancel button */
+                            .cancelbtn {
+                                width: auto;
+                                padding: 10px 18px;
+                                background-color: #f44336;
+                            }
+
+                            /* Center the image and position the close button */
+                            .imgcontainer {
+                                text-align: center;
+                                margin: 24px 0 12px 0;
+                                position: relative;
+                            }
+
+                            img.avatar {
+                                width: 40%;
+                                border-radius: 50%;
+                            }
+
+                            .container {
+                                padding: 16px;
+                            }
+
+                            span.psw {
+                                padding-top: 16px;
+                            }
+
+                            /* The Modal (background) */
+                            .modal {
+                                display: none;
+                                /* Hidden by default */
+                                position: fixed;
+                                /* Stay in place */
+                                z-index: 1;
+                                /* Sit on top */
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                /* Full width */
+                                height: 100%;
+                                /* Full height */
+                                overflow: auto;
+                                /* Enable scroll if needed */
+                                background-color: rgb(0, 0, 0);
+                                /* Fallback color */
+                                background-color: rgba(0, 0, 0, 0.4);
+                                /* Black w/ opacity */
+                                padding-top: 60px;
+                            }
+
+                            /* Modal Content/Box */
+                            .modal-content {
+                                background-color: #fefefe;
+                                margin: 5% auto 15% auto;
+                                /* 5% from the top, 15% from the bottom and centered */
+                                border: 1px solid #888;
+                                width: 900px;
+                                /* Could be more or less, depending on screen size */
+                            }
+
+                            /* The Close Button (x) */
+                            .close {
+                                position: absolute;
+                                right: 25px;
+                                top: 0;
+                                color: #000;
+                                font-size: 35px;
+                                font-weight: bold;
+                            }
+
+                            .close:hover,
+                            .close:focus {
+                                color: red;
+                                cursor: pointer;
+                            }
+
+                            /* Add Zoom Animation */
+                            .animate {
+                                -webkit-animation: animatezoom 0.6s;
+                                animation: animatezoom 0.6s
+                            }
+
+                            @-webkit-keyframes animatezoom {
+                                from {
+                                    -webkit-transform: scale(0)
+                                }
+
+                                to {
+                                    -webkit-transform: scale(1)
+                                }
+                            }
+
+                            @keyframes animatezoom {
+                                from {
+                                    transform: scale(0)
+                                }
+
+                                to {
+                                    transform: scale(1)
+                                }
+                            }
+
+                            /* Change styles for span and cancel button on extra small screens */
+                            @media screen and (max-width: 300px) {
+                                span.psw {
+                                    display: block;
+                                    float: none;
+                                }
+
+                                .cancelbtn {
+                                    width: 100%;
+                                }
+                            }
+
+                            .btn-primary {
+                                color: #fff;
+                                background-color: #007bff;
+                                border-color: #007bff;
+                            }
+                        </style>
                     </div>
-                    <!-- CSS Login -->
-                    <style>
-                        body {font-family: Arial, Helvetica, sans-serif;}
-                        
-                        /* Full-width input fields */
-                        input[type=textlogin], input[type=passwordlogin] {
-                          width: 100%;
-                          padding: 12px 20px;
-                          margin: 8px 0;
-                          display: inline-block;
-                          border: 1px solid #ccc;
-                          box-sizing: border-box;
-                        }
-                        
-                        /* Set a style for all buttons */
-                        .btn-login{
-                          background-color: #242438;
-                          color: white;
-                          padding: auto;
-                          margin: 8px 0;
-                          border: none;
-                          cursor: pointer;
-                          width: auto;
-                          padding-left: 10px;
-                          padding-right: 10px;
-                        }
-                        
-                        .btn-login:hover {
-                          opacity: 0.8;
-                        }
-                        
-                        /* Extra styles for the cancel button */
-                        .cancelbtn {
-                          width: auto;
-                          padding: 10px 18px;
-                          background-color: #f44336;
-                        }
-                        
-                        /* Center the image and position the close button */
-                        .imgcontainer {
-                          text-align: center;
-                          margin: 24px 0 12px 0;
-                          position: relative;
-                        }
-                        
-                        img.avatar {
-                          width: 40%;
-                          border-radius: 50%;
-                        }
-                        
-                        .container {
-                          padding: 16px;
-                        }
-                        
-                        span.psw {
-                          padding-top: 16px;
-                        }
-                        
-                        /* The Modal (background) */
-                        .modal {
-                          display: none; /* Hidden by default */
-                          position: fixed; /* Stay in place */
-                          z-index: 1; /* Sit on top */
-                          left: 0;
-                          top: 0;
-                          width: 100%; /* Full width */
-                          height: 100%; /* Full height */
-                          overflow: auto; /* Enable scroll if needed */
-                          background-color: rgb(0,0,0); /* Fallback color */
-                          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                          padding-top: 60px;
-                        }
-                        
-                        /* Modal Content/Box */
-                        .modal-content {
-                          background-color: #fefefe;
-                          margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-                          border: 1px solid #888;
-                          width: 900px; /* Could be more or less, depending on screen size */
-                        }
-                        
-                        /* The Close Button (x) */
-                        .close {
-                          position: absolute;
-                          right: 25px;
-                          top: 0;
-                          color: #000;
-                          font-size: 35px;
-                          font-weight: bold;
-                        }
-                        
-                        .close:hover,
-                        .close:focus {
-                          color: red;
-                          cursor: pointer;
-                        }
-                        
-                        /* Add Zoom Animation */
-                        .animate {
-                          -webkit-animation: animatezoom 0.6s;
-                          animation: animatezoom 0.6s
-                        }
-                        
-                        @-webkit-keyframes animatezoom {
-                          from {-webkit-transform: scale(0)} 
-                          to {-webkit-transform: scale(1)}
-                        }
-                          
-                        @keyframes animatezoom {
-                          from {transform: scale(0)} 
-                          to {transform: scale(1)}
-                        }
-                        
-                        /* Change styles for span and cancel button on extra small screens */
-                        @media screen and (max-width: 300px) {
-                          span.psw {
-                             display: block;
-                             float: none;
-                          }
-                          .cancelbtn {
-                             width: 100%;
-                          }
-                        }
-						.btn-primary {
-							color: #fff;
-							background-color: #007bff;
-							border-color: #007bff;
-						}
-                    </style>
-                </div>
                 </div>
 
             </div>
@@ -269,8 +299,8 @@
                 <div class="row">
                     <div class="logo col-4">
                         <!-- <img class="logo" src="img/logo.png" alt=""> -->
-                        <a href="danhmuc.html" target=""> 
-                            <img src="img/logo.png" alt="" class="logo"/> </a>
+                        <a href="danhmuc.html" target="">
+                            <img src="img/logo.png" alt="" class="logo" /> </a>
                     </div>
                     <div class="search col-6">
 
@@ -298,30 +328,38 @@
                 <div class="bgmenubar sticky" style="z-index: 0;">
                     <div class="menubar">
                         <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn"><svg class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản phẩm</button>
+                            <button onclick="myFunction()" class="dropbtn"><svg
+                                    class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false"
+                                    data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                                    </path>
+                                </svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản
+                                phẩm</button>
                             <div id="myDropdown" class="dropdown-content">
-                                    <!-- Link S/p -->
-                            <a href="#"><i class="fas fa-university mr-2"></i>Tài sản công</a>
-                              <a href="#"><i class="fas fa-home mr-2"></i>Bất động sản</a>
-                              <a href="#"><i class="fas fa-car mr-2"></i>Xe cộ</a>
-                              <a href="#"><i class="fas fa-image mr-2"></i>Nghệ thuật</a>
-                              <a href="#"><i class="far fa-gem mr-2"></i>Hàng hiệu xa xỉ</a>
-                              <a href="#"><i class="fas fa-plus mr-2"></i>Tài sản khác</a>
+                                <!-- Link S/p -->
+                                <a href="#"><i class="fas fa-university mr-2"></i>Tài sản công</a>
+                                <a href="#"><i class="fas fa-home mr-2"></i>Bất động sản</a>
+                                <a href="#"><i class="fas fa-car mr-2"></i>Xe cộ</a>
+                                <a href="#"><i class="fas fa-image mr-2"></i>Nghệ thuật</a>
+                                <a href="#"><i class="far fa-gem mr-2"></i>Hàng hiệu xa xỉ</a>
+                                <a href="#"><i class="fas fa-plus mr-2"></i>Tài sản khác</a>
                             </div>
                         </div>
-                          <nav class="nav justify-content link1">
+                        <nav class="nav justify-content link1">
                             <a class="nav-link linknav" href="danhmuc.html">Trang chủ</a>
-                            
+
                             <div class="dropdown">
                                 <button class="dropbtn1">Cuộc đấu giá</button>
                                 <div class="dropdown-content">
-                                  <a href="DanhMucSanPham.html">Cuộc đấu giá đang diễn ra</a>
-                                  <a href="#">Cuộc đấu giá đã kết thúc</a>
+                                    <a href="DanhMucSanPham.html">Cuộc đấu giá đang diễn ra</a>
+                                    <a href="#">Cuộc đấu giá đã kết thúc</a>
                                 </div>
                             </div>
                             <a class="nav-link linknav" href="LienHeBanDauGia.html">Liên hệ bán đấu giá</a>
-                                                
-                          </nav>
+
+                        </nav>
 
                         <div class="contactous">
                             <div class="email">
@@ -347,79 +385,152 @@
 
 
     <!-- Contact -->
-    
+
     <div class="container">
 
         <div class="form-area box">
             <form action="" name="myForm">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Liên hệ bán đấu giá</h3>
-                        <p>Hãy nhập đầy đủ thông tin cá nhân và thông tin chi tiết tài sản bạn muốn bán vào bên dưới:
+                        <h3 style="text-align: center;">Liên hệ bán đấu giá</h3>
+                        <p style="text-align: center;">Hãy nhập đầy đủ thông tin chi tiết sản phẩm bạn muốn bán vào bên dưới:
                         </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="textname" name="first-name" id="nameContact" class="form-control bg"
-                                        placeholder="Họ và Tên" aria-describedby="helpId" required>
-                                    <small id="helpId" class="text-muted"></small>
+                        <h4>Thông tin cơ bản</h4>
+                        <form>
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                                <div class="col-sm-10">
+                                    <input type="" class="form-control" id="input" minlength="20" placeholder="" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="tel" name="phone" id="phone" class="form-control bg"
-                                        placeholder="Số điện thoại" aria-describedby="helpId" pattern="[0-9]{10}"
-                                        required>
-                                    <small id="helpId" class="text-muted"></small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="textnoicongtac" name="first-name" id="nameJob" class="form-control bg"
-                                        placeholder="Nơi công tác" aria-describedby="helpId" required>
-                                    <small id="helpId" class="text-muted"></small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="email" name="email" id="email" class="form-control bg"
-                                        placeholder="Địa chỉ email" aria-describedby="true" required>
-                                    <small id="helpId" class="text-muted"></small>
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Danh mục sản phẩm</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="" id="" required>
+                                        <option></option>
+                                        <option>Tài sản công</option>
+                                        <option>Bất động sản</option>
+                                        <option>Xe cộ</option>
+                                        <option>Nghệ thuật</option>
+                                        <option>Hàng hiệu xa xỉ</option>
+                                        <option>Khác</option>
+                                    </select>
                                 </div>
                             </div>
 
+                        </form>
 
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="your-message" id="messageContent" rows="8"
+                                    minlength="50" placeholder="Mô tả thông tin chi tiết sản phẩm" required></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for=""></label>
-                            <textarea class="form-control" name="your-message" id="messageContent" rows="6"
-                                minlength="50" placeholder="Thông tin chi tiết tài sản" required></textarea>
+
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Hình ảnh sản phẩm</label>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+    
                         </div>
-                        <button type="button" name="submit" class="btn" id="btn-bg">Gửi thông tin yêu cầu bán đấu
-                            giá</button>
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label"></label>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Tình trạng</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="" id="" required>
+                                    <option>Mới</option>
+                                    <option>Đã qua sử dụng</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Giá khởi điểm</label>
+                            <div class="input-group col-sm-6">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">₫</div>
+                                </div>
+                                <input type="number" id=""  class="form-control" id="" placeholder="Nhập vào" required >
+                            </div>
+                            
+                        </div>
+
+                        
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Thời gian bắt đầu</label>
+                                <div class="input-group col-sm-6">
+                                    <input type="datetime-local" class="form-control" id="" name="" required>
+                                </div>
+                            </div>
+                        
+
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Thời gian kết thúc</label>
+                                <div class="input-group col-sm-6">
+                                    <input type="datetime-local" class="form-control" id="" name="" required>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group row">
+                                <label class="col-sm-7 col-form-label"></label>
+                                <div class="col-sm-4">
+                            <button type="submit" name="submit" class="btn" id="btn-bg">Gửi thông tin yêu cầu bán đấu
+                            giá</button></div>
+                        </div>
                     </div>
+                    
+                    
+
                 </div>
 
 
             </form>
         </div>
-    </div>
-
-
-    <div class="container bg-inf">
-        <p style="margin-left: 10px; margin-top: 120px;"><i class="fa fa-map-marker" style="margin-right: 10px;" aria-hidden="true">
-        </i>Nam Kì Khởi Nghĩa, Thành Phố Đà Nẵng Việt Nam </p>
-        <p style="margin-left: 10px;"><i class="fa fa-envelope" style="margin-right: 10px;"
-                aria-hidden="true"></i>codedream@gmail.com</p>
-        <p style="margin-left: 10px;"><i class="fa fa-phone-alt" style="margin-right: 10px;" aria-hidden="true"></i>+84 123 456 789
-            <br>
-            <i style="margin-right: 25px;"></i>+84 987
-            654 321
-        </p>
     </div>
     <!-- Contact -->
 
@@ -476,9 +587,9 @@
             </div>
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
-        
-        
-        
+
+
+
         <!-- Date-time -->
         <div class="time-part">
             <i style="margin-right: 4px;" class="far fa-clock"></i>
@@ -487,54 +598,126 @@
                 </script>
             </label>
         </div>
-        
-        
+
+
         <!-- Back-Top -->
         <div id="backtop">
             <i class="fas fa-chevron-circle-up"></i>
         </div>
 
-        
-        
+
+
     </footer>
     <!-- Footer -->
-    
+
     <!-- JS Login -->
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
-        
+
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+    </script>
+
+    <!-- img -->
+    <script>
+        document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+            const dropZoneElement = inputElement.closest(".drop-zone");
+
+            dropZoneElement.addEventListener("click", (e) => {
+                inputElement.click();
+            });
+
+            inputElement.addEventListener("change", (e) => {
+                if (inputElement.files.length) {
+                    updateThumbnail(dropZoneElement, inputElement.files[0]);
+                }
+            });
+
+            dropZoneElement.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                dropZoneElement.classList.add("drop-zone--over");
+            });
+
+            ["dragleave", "dragend"].forEach((type) => {
+                dropZoneElement.addEventListener(type, (e) => {
+                    dropZoneElement.classList.remove("drop-zone--over");
+                });
+            });
+
+            dropZoneElement.addEventListener("drop", (e) => {
+                e.preventDefault();
+
+                if (e.dataTransfer.files.length) {
+                    inputElement.files = e.dataTransfer.files;
+                    updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+                }
+
+                dropZoneElement.classList.remove("drop-zone--over");
+            });
+        });
+
+
+        function updateThumbnail(dropZoneElement, file) {
+            let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+            // First time - remove the prompt
+            if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+                dropZoneElement.querySelector(".drop-zone__prompt").remove();
+            }
+
+            // First time - there is no thumbnail element, so lets create it
+            if (!thumbnailElement) {
+                thumbnailElement = document.createElement("div");
+                thumbnailElement.classList.add("drop-zone__thumb");
+                dropZoneElement.appendChild(thumbnailElement);
+            }
+
+            thumbnailElement.dataset.label = file.name;
+
+            // Show thumbnail for image files
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+                };
+            } else {
+                thumbnailElement.style.backgroundImage = null;
+            }
+        }
+
     </script>
     <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/header.js"></script>
-    
+
     <!-- Back-Top -->
     <script>
-        $(document).ready(function(){
-            $(window).scroll(function(){
-                if($(this).scrollTop()){
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
                     $('#backtop').fadeIn();
-                }else{
+                } else {
                     $('#backtop').fadeOut();
                 }
             });
-            $('#backtop').click(function(){
-            $('html, body').animate({
-                scrollTop: 0
-            }, 500);
+            $('#backtop').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
             });
         });
-        
+
     </script>
 
 
