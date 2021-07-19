@@ -1002,9 +1002,7 @@ header.mt-full-screen {
 .navbar-header .logo > a {
     color: #242424 !important;
 }
-.logo img {
-    max-width: 150px;
-}
+
 footer .logo img {
     max-width: 120px;
 }

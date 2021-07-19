@@ -25,10 +25,6 @@
         width: 48%
     }
 
-.woocommerce img, .woocommerce-page img {
-    height: auto;
-    max-width: 100%
-}
 
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
     float: left;

@@ -104,8 +104,9 @@
                 <div class="thetrang col-6 "></div>
                 <!-- Col Đăng nhập - Đăng ký -->
                 <div class="col-4 col-login">
-                    <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng Nhập</button>/
-                    <button class="btn-login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng Ký</button>
+                    <button class="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng Nhập</button>
+                    <button class="btn-login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i
+                        class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button>
                     <div id="id01" class="modal">
                         <form class="modal-content animate" action="/action_page.php" method="post">
                           <div class="imgcontainer">
@@ -123,10 +124,10 @@
                             <label class="d-block">
                               <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
                             </label>
-							<button type="button" class="btn btn-primary p-2">Đăng nhập</button>
+							<button type="button" class="btn btn-primary p-2"><a href="user/Udanhmuc.html" style="color: white !important; text-decoration: none !important;">Đăng nhập</a></button>
                           </div>
                       
-                          <div class="container" style="background-color:#f1f1f1">
+                          <div class="container container-login" style="background-color:#f1f1f1">
                             <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
                             <span class="psw">Quên mật khẩu? nhấn vào <a href="#">đây!</a></span>
                           </div>
@@ -182,7 +183,7 @@
                           border-radius: 50%;
                         }
                         
-                        .container {
+                        .container-login {
                           padding: 16px;
                         }
                         
@@ -274,8 +275,7 @@
         </div>
         <!-- Header -->
         <div class="header">
-        <div class="row">
-            
+        <div class="row">           
                 <!-- row Logo and Tìm kiếm -->
                 <!-- <div class="row row-logo"> -->
                     <div class="logo col-4">
@@ -349,12 +349,12 @@
                         
                     </div>
                 </div>
-            <div class="row row-link">
-                <ol class="breadcrumb">
-                    <li><a href="danhmuc.html">Trang chủ / </a></li>
-                    <li class="active"> Cuộc đấu giá</li>
-                </ol>               
-            </div>
+                <div class="row row-link">
+                    <ol class="breadcrumb">
+                        <li><a href="danhmuc.html">Trang chủ / </a></li>
+                        <li class="active-link"> Cuộc đấu giá</li>
+                    </ol>               
+                </div>
         </div>
         </div>
     </header>
@@ -425,7 +425,7 @@
             </div>
             <!--Col sản phẩm  -->
             <div class="col-8 bg-cl-c left">
-                <div class="row row-img">
+                <div class="row row-img ">
                     <div class="col-3 col-img">
                         <div class="pic-area">
                             <a href="DaugiaInfo.html">
@@ -441,7 +441,7 @@
                             <div class="details-price-container details-item">
                                 Ngày kết thúc :
                                 <span class="price">
-                                    <span class="novaticPrice woocommerce-Price-amount amount">16/07/2021 09:00:00</span>
+                                    <span class="novaticPrice woocommerce-Price-amount amount">16/08/2011 00:00</span>
                                 </span>
                                 <div class="details-review-container details-item"></div><div class="bottom-components">
                                     <div class="component add-to-cart" style="display:none">
@@ -1199,8 +1199,9 @@
                     <div class="noi-dung links">
                         <h2>Đường Dẫn</h2>
                         <ul>
-                            <li><a href="#">Trang Chủ</a></li>
-                            <li><a href="#">Liên hệ bán hàng</a></li>
+                            <li><a href="danhmuc.html">Trang Chủ</a></li>
+                        <li><a href="DanhMucSanPham.html">Cuộc đấu giá</a></li>
+                        <li><a href="LienHeBanDauGia.html">Liên hệ bán hàng</a></li>
                         </ul>
                     </div>
                     <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -1211,7 +1212,7 @@
                             <li>
                                 <span><i class="fa fa-map-marker"></i></span>
                                 <span>Nam Kì Khởi Nghĩa<br />
-                                    Fsoft, Thành Phố Đà Nẵng<br />
+                                    Thành Phố Đà Nẵng<br />
                                     Việt Nam</span>
                             </li>
                             <li>

@@ -16,13 +16,20 @@ header{
     height: 100%;
     /* background-color: tomato; */
     padding-left: 50px;
+    background: #f8f8f8;
 }
 .bg-cl-c{
     padding-left: 12px;
     height: 100%;
+    background: #f8f8f8;
     /* background-color: rgb(231, 211, 207); */
 }
-
+.col-img{
+  box-shadow:
+    0px 0px 10px 8px #f5efef,
+    0px 0px 10px 4px #dbdbdb,
+    30px 0 20px 15px #ffffff;
+}
 
 .form-timkiem .form-control{
     border: 1px solid #e5ecef;
@@ -66,6 +73,8 @@ ul, ol {
 .pic-area .picture{
     width: 465px;
     min-height: 250px;
+    text-align: center;
+    position: relative;
 }
 .ellipsis2{
     
@@ -111,6 +120,7 @@ element.style {
 }
 .center {
     text-align: center;
+    padding-top: 30px;
   }
   
   .pagination {
@@ -169,6 +179,7 @@ element.style {
     padding-bottom: 40px;
     margin-right: 0px;
     margin-left: 0px;
+    padding-top: 70px;
 }
 .breadcrumb {
     background: transparent;
@@ -259,7 +270,7 @@ a {
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
+    margin-top: 15px;
   }
   
   /* Container for image text */
@@ -297,9 +308,170 @@ a {
     min-height: 130px;
   }
   .col-auction-info{
-    background-color: wheat;
+    /* background-color: wheat; */
     width: 100%;
     height: 700pxx;
     margin-left: 10px;
   }
- 
+ .col-login{
+   z-index: 1100;
+ }
+ .item-page{
+    background: #ececec;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 15px;
+}
+.item-page-column{
+  flex: 1 1;
+  margin-right: 4%;
+  /* background-color: red; */
+}
+.item-page-column-header{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.item-page-column-price{
+  font-weight: 700;
+  font-size: 18px;
+}
+.highest-price{
+  color: #007c25;
+}
+.item-page-column-secondary-value{
+  font-size: 12px;
+  color: #767676;
+  margin-top: 10px;
+}
+.item-page-bidding-box{
+  text-align: center;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    margin: 15px 0;
+    padding: 20px;
+}
+.item-page-bidding-tab-container{
+  display: table;
+  width: 100%;
+}
+.item-page-bidding-container{
+  display: table-row;
+}
+.item-page-bidding-field-wrapper{
+  width: auto;
+  padding-right: .3em;
+  position: relative;
+}
+.item-page__bidding-form__field {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 4px 2.5em 4px 16px;
+}
+.item-page__bidding-form__currency {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #767676;
+  font-size: 18px;
+  padding: 4px 20px 4px 0;
+}
+.item-page-bidding-button-wrapper{
+  width: 1px;
+  white-space: nowrap;
+  display: table-cell;
+  vertical-align: top;
+}
+.button-wrapper{
+    background: #fc2c7f;
+    border: 1px solid #fc2c7f;
+    border-bottom: 2px solid rgba(0,0,0,.35);
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 18px;
+}
+.item-page-bid-instructions{
+  font-size: 12px;
+  color: #767676;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.small-header{
+  font-weight: 700;
+  font-size: 16px;
+}
+.bid-list {
+    font-size: 14px;
+    margin: 15px 0 30px;
+    width: 100%;
+}
+.bid-list_entry{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.bid-list_entry td {
+  padding: 10px 0;
+  border: 0 solid #ececec;
+  border-width: 1px 0;
+}
+.bid-list_label {
+  display: inline-block;
+  text-align: center;
+  padding: 2px 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #767676;
+  color: #fff;
+}
+.bid-list__label--number {
+  width: 2.5em;
+}
+.bid-list_label {
+  display: inline-block;
+  text-align: left;
+  padding: 2px 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #767676;
+  color: #fff;
+}
+.bid-list_bidder {
+  width: 30%;
+  font-weight: 700;
+}
+.bid-list_date {
+  text-align: center;
+  color: #767676;
+}
+.bid-list_amount {
+  width: 30%;
+  text-align: right;
+  font-weight: 700;
+  color: #404040;
+}
+.bid-list-amount {
+  width: 30%;
+  text-align: right;
+  font-weight: 700;
+}
+.product-description{
+  margin-bottom: -.2em;
+  margin-top: 10px;
+}
+.item-page-column-secondary-value .description{
+  margin-top: 5px;
+}
+.bid-list_entry .bid-list_more{
+  text-align: center;
+}
+.bid-list_more .test-list-bids{
+  display: block;
+  padding: 10px 0;
+  color: #404040;
+}

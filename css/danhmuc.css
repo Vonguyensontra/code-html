@@ -1,3 +1,6 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
 .container_dentails{
     margin: 5% 5% 1.5% 5%;
     float: left;
@@ -31,12 +34,13 @@
     font-weight: 700px;
 }
 .categorybutton .button{
+    margin-left: -5%;
     font-weight: 600px;
     line-height: 20px;
     color: white;
     border: 1px solid white ;
     border-radius: 30px;
-    padding: 14px 25px;
+    padding: 14px 30px;
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -90,7 +94,7 @@ li{
     float: right;
     width: 55%;
     height: 100%;   
-    
+    font-size: 14px;
 }
 .tiltle_dentail h3{
     padding-top: 4%;
@@ -114,7 +118,7 @@ li{
 .price{
     color: red;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .container_category{
@@ -162,8 +166,8 @@ li{
     transition: ease-out cubic-bezier(10%, 10.5%, 10%, 20%);
 }
 .form_pro:hover{
-    width: 300px;
-    height: 170px;  
+    width: 95%;
+    height: 94%;  
     border: 1px solid #4195fc; /* some kind of blue border */
 
     /* other CSS styles */
@@ -314,22 +318,30 @@ li{
 }
 
 .sixcategory{
-   padding-left: 20px;
-   padding-top: 20px;
+   padding-left: 3%;
+   padding-top: 2%;
 }
 
 .h123{
+    font-weight: 900;
   padding-bottom: 0px;
   font-size: 35px;
-  padding: 0;
+  padding-left: 5%;
+  padding-top: 5%;
 }
 .soluongtaisan{
     margin-top: -25px;
-   
+    padding-left: 6%;
+    padding-top: 2%;
 }
 .fourbutton{
-    margin-top: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10%;
+    
 }
 .twobutton{
-    margin-top: 50px;
+    margin-top: 15px;
+    padding-left: 5%;
+    margin-left: 2%;
 }
