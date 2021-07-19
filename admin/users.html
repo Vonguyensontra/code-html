@@ -22,9 +22,9 @@
 </head>
 
 <body class="adminbody">
-
+   
     <div id="main">
-
+        
         <!-- top bar navigation -->
         <div class="headerbar">
 
@@ -35,6 +35,8 @@
                     <span>NURA ADMIN</span>
                 </a>
             </div>
+            
+
 
             <nav class="navbar-custom">
 
@@ -499,8 +501,56 @@
 
 
                                                     <td>
-                                                        <a href="#" class="btn btn-primary btn-sm btn-block"><i class="far fa-edit"></i> Edit</a>
-                                                        <a href="#" class="btn btn-danger btn-sm btn-block mt-2"><i class="fas fa-trash"></i> Delete</a>
+                                                            <input type="checkbox" id="show">
+                                                            <label for="show" class="btn btn-primary btn-sm btn-block"><i class="far fa-edit"></i> Edit</a></label>
+                                                            <div class="container">   
+                                                                <label for="show" class="close-btn fas fa-times"></label>
+                                                                <div class="text">Edit User</div>
+                                                                <form action="#">
+                                                                    <div class="data">
+                                                                        <label for="#">Full Name</label>
+                                                                        <input type="password">
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <label for="#">Phone</label>
+                                                                        <input type="password">
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <label for="#">Email</label>
+                                                                        <input type="text" name="" id="">
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <label for="#">Address</label>
+                                                                        <input type="password">
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <label for="#">Password</label>
+                                                                        <input type="text" name="" id="">
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <label for="#">Confirm Password</label>
+                                                                        <input type="password">
+                                                                    </div>
+                                                                    <div class="btn_update">
+                                                                        <div class="inner"></div>
+                                                                        <button type="submit">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            
+                                                        <input type="checkbox" id="show_qus">
+                                                        <label for="show_qus" class="btn btn-danger btn-sm btn-block mt-2"><i class="fas fa-trash"></i> Delete</a></label>
+                                                        <div class="container2">
+                                                            <label for="show_qus" class="close-btn fas fa-times"></label>
+                                                            <div class="text">You Want Delete This User</div>
+                                                            <form action="#">
+                                                                <div class="btn_delete">
+                                                                    <div class="inner"></div>
+                                                                    <button type="submit">Yes</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        
                                                     </td>
                                                 </tr>
 
