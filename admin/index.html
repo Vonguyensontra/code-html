@@ -247,32 +247,32 @@
 
                     <ul>
 
-                        <li class="submenu active">
+                        <li class="submenu">
                             <a href="index.html">
                                 <i class="fas fa-bars"></i>
-                                <span> Dashboard </span>
+                                <span> Đơn hàng </span>
                             </a>
                         </li>
 
                         <li class="submenu">
                             <a href="users.html">
                                 <i class="fas fa-user"></i>
-                                <span> Users </span>
+                                <span> Người Dùng </span>
                             </a>
                         </li>
 
                         <li class="submenu">
                             <a href="#">
                                 <i class="far fa-file-alt"></i>
-                                <span> Blog </span>
+                                <span> Sản Phẩm </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="blog.html">List blog posts</a>
+                                    <a href="blog.html">Danh sách sản phẩm</a>
                                 </li>
                                 <li >
-                                    <a  href="blog-add.html">Add blog post</a>
+                                    <a href="blog-add.html">Thêm Sản Phẩm</a>
                                 </li>
                             </ul>
                         </li>
@@ -296,33 +296,17 @@
                         <li class="submenu">
                             <a href="slider.html">
                                 <i class="fas fa-photo-video"></i>
-                                <span> Slider </span>
+                                <span> Sự Kiện </span>
                             </a>
                         </li>
 
                         <li class="submenu">
                             <a href="charts.html">
                                 <i class="fas fa-chart-line"></i>
-                                <span> Charts </span>
+                                <span> Sơ đồ </span>
                             </a>
                         </li>
-
-                        <li class="submenu">
-                            <a id="tables" href="#">
-                                <i class="fas fa-table"></i>
-                                <span> Tables </span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="tables-basic.html">Basic Tables</a>
-                                </li>
-                                <li>
-                                    <a href="tables-datatable.html">Data Tables</a>
-                                </li>
-                            </ul>
-                        </li>
-
+                        
                     </ul>
 
                     <div class="clearfix"></div>
@@ -413,12 +397,16 @@
                                         <table id="dataTable" class="table table-bordered table-hover display" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Extn.</th>
-                                                    <th>Date</th>
-                                                    <th>Salary</th>
+                                                    <th>Mã ĐH</th>
+                                                    <th>Tên</th>
+                                                    <th>Địa Chỉ</th>
+                                                    <th>Số Điện Thoại</th>
+                                                    <th>Ngày Đặt Hàng</th>
+                                                    <th>Đơn Giá</th>
+                                                    <th>Thành Tiền</th>
+                                                    <th>Tình Trạng</th>
+                                                    <th>Xác Nhận Thanh Toán</th>
+                                                    <th>Hủy Đơn</th>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -492,18 +480,26 @@
             $('#dataTable').DataTable({
                 data: dataSet,
                 columns: [{
-                    title: "Name"
+                    title: "Mã ĐH"
                 }, {
-                    title: "Position"
+                    title: "Tên"
                 }, {
-                    title: "Office"
+                    title: "Địa Chỉ"
                 }, {
-                    title: "Extn."
+                    title: "Số Điện Thoại"
                 }, {
-                    title: "Date"
+                    title: "Ngày Đặt Hàng"
                 }, {
-                    title: "Salary"
-                }]
+                    title: "Đơn Giá"
+                }, {
+                    title: "Thành Tiền"
+                }, {
+                    title: "Tình Trạng"
+                }, {
+                    title: "Xác Nhận Thanh Toán"
+                }, {
+                    title: "Hủy Đơn"
+                }, ]
             });
 
             // counter-up
