@@ -367,27 +367,28 @@
             <!--Col tìm kiếm  -->
             <div class="col-2 bg-cl-r left">
                 <form action="">
-                    <div class="form-group form-timkiem">
+                    <!-- <div class="form-group form-timkiem">
                       <label class="screen-reader-text" for="woocomer-"></label>
                       <input type="text"  class="form-control" name="Tìm kiếm" placeholder="Tìm kiếm">
                       <small id="usError" class="text-danger"></small>
-                    </div>
-
+                    </div> -->
+                    <label class= "label-tk " for="">Lọc mục sản phẩm:</label>
                     <div class="form-group form-chonmuc ">
-                        <label class= "label-tk" for="">Lọc mục sản phẩm:</label>
                         <select class="form-control form-tk" name="" id="">
-                          <option value="#">Phương tiện - xe cộ</option>
+                          <option value="#" aria-placeholder="" hidden>Loại sản phẩm</option>
+                          <option value="#">Tài sản công</option>
                           <option value="#">Bất động sản</option>
-                          <option value="#">Đồ nghệ thuật</option>
-                          <option value="#">#</option>
-                          <option value="#">#</option>
-                          <option value="#">#</option>
+                          <option value="#">Xe cộ</option>
+                          <option value="#">Nghệ thuật</option>
+                          <option value="#">Hàng hiệu xa xỉ</option>
+                          <option value="#">Tài sản khác</option>
                         </select>
                         <small id="SelectAvatarError" class="text-danger"></small>
                       </div>
 
                     <div class="form-group">
                         <select class="form-control form-gia" name="" id="">
+                            <option value="#" aria-placeholder="" hidden>Giá cả</option>
                             <option value="thapnhat">Giá thấp nhất</option>
                             <option value="caonhat">Giá cao nhất</option>
                         </select>
@@ -396,6 +397,7 @@
 
                     <div class="form-group">
                         <select class="form-control form-thoigian" name="" id="">
+                            <option value="#" aria-placeholder="" hidden>Thời gian bán</option>
                             <option value="moinhat">Mới nhất</option>
                             <option value="cuhon">Cũ hơn</option>
                         </select>
