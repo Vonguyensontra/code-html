@@ -105,6 +105,13 @@ input{
     background-color: #DDDDDD;
     
 }
+.thetrong1{
+    height: 40px;
+    border: none !important;
+    outline:none !important;
+    background-color: #DDDDDD;
+    
+}
 .thetrong:focus{
 
 }
