@@ -1,9 +1,10 @@
 html {
     height: 100%;
-    font-family: Roboto;
+    
   }
 body {
     min-height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
   }
  
 .xtabar{
@@ -46,7 +47,7 @@ body {
 }
 .xheader {
     background: white;
-    height: 120px;
+    height: 200px;
     width: 80%;
     margin: auto;
     
@@ -114,16 +115,12 @@ body {
     background: #484848;
     border: 2px solid #484848;
     line-height: 39px;
-    padding: 0;
     border-radius: 30px;
-    padding-right: 11px;
-    padding-left: 11px;
-    height: 42px;
-    position: absolute;
-    right: 2px;  
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    text-align: center;
     
-    padding-bottom: 11px;
-   
 }
 .xiconsearch:hover{
     background-color: #f7921a;
@@ -139,7 +136,7 @@ body {
     height: 68px;
 
     padding-top: 12px;
-    padding-left: 145px;
+    padding-left: 12px;
     font-weight: bold;
     display: flex;
     position: relative;
@@ -212,8 +209,11 @@ body {
 .xlinknav{
     height: 44px;
     color: white;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.xnav-link{
+    display: block ;
+    padding: .5rem 1rem;
 }
 .xlink1{
   padding-bottom: 4px;
@@ -224,7 +224,7 @@ body {
     height: 100%;
     right: 20px;
     top: 0;
-    padding-right: 135px;
+   
 }
 
 .xemail{
@@ -251,7 +251,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto;
+   
 }
 footer{
      position: relative;
