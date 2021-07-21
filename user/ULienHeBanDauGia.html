@@ -12,16 +12,89 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/header.css">
+
+    <style>
+        #backtop {
+            font-size: 40px;
+            color: #f7921a;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #backtop:hover {
+            color: gray;
+        }
+
+        .time-part {
+            background-color: #f7921a;
+            color: white;
+            font-size: 19px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+
+    <script>
+        function date_time() {
+            var today = new Date(); //lay ngay gio hien tai
+            var gio = today.getHours(); //lay gio hien tai
+            var phut = today.getMinutes(); //lay phut hien tai
+            var giay = today.getSeconds();
+            //cap nhat thoi gian sau moi giay
+            setTimeout("date_time()", 1000); //cu sau 1 giay ta goi 
+
+            //ngay thang nam
+            var x = new Date();
+
+            // Lấy số thứ tự của ngày hiện tại
+            var current_day = x.getDay();
+            var day_name = '';
+            var day = x.getDate();
+            var month = x.getMonth() + 1;
+            var year = x.getFullYear();
+            // Lấy tên thứ của ngày hiện tại
+            switch (current_day) {
+                case 0:
+                    day_name = "CHỦ NHẬT";
+                    break;
+                case 1:
+                    day_name = "THỨ HAI";
+                    break;
+                case 2:
+                    day_name = "THỨ BA";
+                    break;
+                case 3:
+                    day_name = "THỨ TƯ";
+                    break;
+                case 4:
+                    day_name = "THỨ NĂM";
+                    break;
+                case 5:
+                    day_name = "THỨ SÁU";
+                    break;
+                case 6:
+                    day_name = "THỨ BẢY";
+            }
+
+            //truy cap vao id time, dan text thongtin
+            document.getElementById('time').innerHTML = gio + ":" + phut + ":" + giay + "   " + day_name + "," + "   " + day + "/" + month + "/" + year;
+        }
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <div class="container1">
+            <!-- Tabar -->
             <div class="tabar">
                 <div class="minitabar">
                     <div class="socialnetwork col-4">
-
+    
                         <p class="text mr-4 margin textcolor ">Theo dõi chúng tôi:</p>
                         <a href="" class="margin iconcolor hovericon"><i class="fab fa-facebook-f"></i></a>
                         <a href="" class="margin iconcolor hovericon"><i class="fab fa-twitter"></i></a>
@@ -44,7 +117,7 @@
                         <div class="dropdowna thongtin">
                             <button class="dropbtna user">user 001<i class="fas fa-sort-down iconcolor"></i></button>
                             <div class="dropdown-contenta" >
-                              <a href="thong-bao.html">Thông báo</a>
+                              <a href="#">Thông báo</a>
                               <a href="#">Thông tin tài khoản</a>
                               <a href="#">Đấu giá của tôi</a>
                               <a href="#">Tài sản đấu giá</a>
@@ -54,67 +127,79 @@
                           </div>
                     </div>
                 </div>
-
             </div>
-
+            <!-- Header -->
             <div class="header">
                 <div class="row">
-                    <div class="logo col-4">
-                        <!-- <img class="logo" src="img/logo.png" alt=""> -->
-                        <a href="Udanhmuc.html" target=""> 
-                            <img src="img/logo.png" alt="" class="logo"/> </a>
-                    </div>
-                    <div class="search col-6">
-
-                        <form action="" method="get" class="minisearch ">
-                            <select name="" id="" class="list">
-                                <option value="">Danh Mục Tài Sản</option>
-                                <option value="">Danh Mục Tài Sản</option>
-                                <option value="">Danh Mục Tài Sản</option>
-                                <option value="">Danh Mục Tài Sản</option>
-                                <option value="">Danh Mục Tài Sản</option>
-                            </select>
-                        </form>
-                        <div class="form-group input ">
-
-                            <input style="border:none;box-shadow: none !important;background-color: 	#DDDDDD;"
-                                type="text" class="form-control" name="" id="" placeholder="Nhập tên sp">
-                        </div>
-                        <div class="iconsearch">
-                            <a href=""><i class="fas fa-search"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="bgmenubar">
+                    
+                        <!-- row Logo and Tìm kiếm -->
+                        <!-- <div class="row row-logo"> -->
+                            <div class="logo col-4">
+                                <!-- <img class="logo" src="img/logo.png" alt=""> -->
+                                <a href="Udanhmuc.html" target=""> 
+                                    <img src="img/logo.png" alt="" class="logo"/> </a>
+                            </div>
+                            <div class="search col-8 row">
+                                <form action="" method="get" class="minisearch col-4 ">
+                                    <select name="" id="" class="list">
+                                        <option value="">Danh Mục Tài Sản</option>
+                                        <option value="">Danh Mục Tài Sản</option>
+                                        <option value="">Danh Mục Tài Sản</option>
+                                        <option value="">Danh Mục Tài Sản</option>
+                                        <option value="">Danh Mục Tài Sản</option>
+                                    </select>
+                                </form>
+                                <div class="form-group input col-6">
+                                    <input class="thetrong" style="height: 40px;border:none;box-shadow: none !important;background-color: 	#DDDDDD;"
+                                    type="text" class="form-control" name="" id="" placeholder="Nhập tên sp">
+                                </div>
+                                <div class="col-1" style="margin-left: -10px;">
+                                    <div class="iconsearch ">
+                                  
+                                        <a  href=""><i class="fas fa-search"></i></a>
+                                   
+                                    </div>
+                                </div>
+        
+                            </div>
+                        <!-- </div> -->
+                    </div> 
+                        <!-- Menu Danh mục - Trang chủ - Đấu giá - Liên hệ bán -->
+                <div class="bgmenubar sticky" style="z-index: 0;">
                     <div class="menubar">
                         <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn"><svg class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản phẩm</button>
+                            <button onclick="myFunction()" class="dropbtn"><svg
+                                    class="svg-inline--fa fa-bars fa-w-14 mr-2" aria-hidden="true" focusable="false"
+                                    data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                                    </path>
+                                </svg><!-- <i class="fas fa-bars mr-2"></i> Font Awesome fontawesome.com -->Danh mục sản
+                                phẩm</button>
                             <div id="myDropdown" class="dropdown-content">
-                                    <!-- Link S/p -->
-                            <a href="#"><i class="fas fa-university mr-2"></i>Tài sản công</a>
-                              <a href="#"><i class="fas fa-home mr-2"></i>Bất động sản</a>
-                              <a href="#"><i class="fas fa-car mr-2"></i>Xe cộ</a>
-                              <a href="#"><i class="fas fa-image mr-2"></i>Nghệ thuật</a>
-                              <a href="#"><i class="far fa-gem mr-2"></i>Hàng hiệu xa xỉ</a>
-                              <a href="#"><i class="fas fa-plus mr-2"></i>Tài sản khác</a>
+                                <!-- Link S/p -->
+                                <a href="#"><i class="fas fa-university mr-2"></i>Tài sản công</a>
+                                <a href="#"><i class="fas fa-home mr-2"></i>Bất động sản</a>
+                                <a href="#"><i class="fas fa-car mr-2"></i>Xe cộ</a>
+                                <a href="#"><i class="fas fa-image mr-2"></i>Nghệ thuật</a>
+                                <a href="#"><i class="far fa-gem mr-2"></i>Hàng hiệu xa xỉ</a>
+                                <a href="#"><i class="fas fa-plus mr-2"></i>Tài sản khác</a>
                             </div>
                         </div>
-                          <nav class="nav justify-content link1">
+                        <nav class="nav justify-content link1">
                             <a class="nav-link linknav" href="Udanhmuc.html">Trang chủ</a>
-                            
+
                             <div class="dropdown">
                                 <button class="dropbtn1">Cuộc đấu giá</button>
                                 <div class="dropdown-content">
-                                  <a href="UDanhMucSanPham.html">Cuộc đấu giá sắp đấu giá</a>
-                                  <a href="#">Cuộc đấu giá đang diễn ra</a>
-                                  <a href="#">Cuộc đấu giá đã kết thúc</a>
+                                    <a href="UDanhMucSanPham.html">Cuộc đấu giá đang diễn ra</a>
+                                    <a href="#">Cuộc đấu giá đã kết thúc</a>
                                 </div>
                             </div>
                             <a class="nav-link linknav" href="ULienHeBanDauGia.html">Liên hệ bán đấu giá</a>
-                                                
-                          </nav>
+
+                        </nav>
 
                         <div class="contactous">
                             <div class="email">
@@ -131,92 +216,168 @@
 
                     </div>
                 </div>
-            </div>
-
-        </div>
-
-    </header>
-    <!-- Header -->
+                    <div class="row row-link">
+                        <ol class="breadcrumb">
+                            <li><a href="Udanhmuc.html">Trang chủ / </a></li>
+                            <li class="active-link"> Liên hệ bán đấu giá</li>
+                        </ol>               
+                    </div>
+                </div>
 
 
     <!-- Contact -->
+
     <div class="container">
 
         <div class="form-area box">
             <form action="" name="myForm">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Liên hệ bán đấu giá</h3>
-                        <p>Hãy nhập đầy đủ thông tin cá nhân và thông tin chi tiết tài sản bạn muốn bán vào bên dưới:
+                        <h3 style="text-align: center;">Liên hệ bán đấu giá</h3>
+                        <p style="text-align: center;">Hãy nhập đầy đủ thông tin chi tiết sản phẩm bạn muốn bán vào bên dưới:
                         </p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="text" name="first-name" id="nameContact" class="form-control bg"
-                                        placeholder="Họ và Tên" aria-describedby="helpId" required>
-                                    <small id="helpId" class="text-muted"></small>
+                        <h4>Thông tin cơ bản</h4>
+                        <form>
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                                <div class="col-sm-10">
+                                    <input type="" class="form-control" id="input" minlength="20" placeholder="" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="tel" name="phone" id="phone" class="form-control bg"
-                                        placeholder="Số điện thoại" aria-describedby="helpId" pattern="[0-9]{10}"
-                                        required>
-                                    <small id="helpId" class="text-muted"></small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="text" name="first-name" id="nameJob" class="form-control bg"
-                                        placeholder="Nơi công tác" aria-describedby="helpId" required>
-                                    <small id="helpId" class="text-muted"></small>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for=""></label>
-                                    <input type="email" name="email" id="email" class="form-control bg"
-                                        placeholder="Địa chỉ email" aria-describedby="true" required>
-                                    <small id="helpId" class="text-muted"></small>
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Danh mục sản phẩm</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="" id="" required>
+                                        <option></option>
+                                        <option>Tài sản công</option>
+                                        <option>Bất động sản</option>
+                                        <option>Xe cộ</option>
+                                        <option>Nghệ thuật</option>
+                                        <option>Hàng hiệu xa xỉ</option>
+                                        <option>Khác</option>
+                                    </select>
                                 </div>
                             </div>
 
+                        </form>
 
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="your-message" id="messageContent" rows="8"
+                                    minlength="50" placeholder="Mô tả thông tin chi tiết sản phẩm" required></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for=""></label>
-                            <textarea class="form-control bg" name="your-message" id="messageContent" rows="6"
-                                minlength="50" placeholder="Thông tin chi tiết tài sản" required></textarea>
+
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Hình ảnh sản phẩm</label>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+    
                         </div>
-                        <button type="submit" name="submit" class="btn" id="btn">Gửi thông tin yêu cầu bán đấu
-                            giá</button>
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label"></label>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="drop-zone">
+                                    <label for="first_img" class="drop-zone__prompt"><i class="fas fa-plus-circle" style="font-size: 30px; display: flex;"></i></label>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Tình trạng</label>
+                            <div class="col-sm-6">
+                                <select class="form-control" name="" id="" required>
+                                    <option>Mới</option>
+                                    <option>Đã qua sử dụng</option>
+                                </select>
+                            </div>
+                        </div> -->
+
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Giá khởi điểm</label>
+                            <div class="input-group col-sm-6">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">₫</div>
+                                </div>
+                                <input type="number" id=""  class="form-control" id="" placeholder="Nhập vào" required >
+                            </div>
+                            
+                        </div>
+
+                        
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Thời gian bắt đầu</label>
+                                <div class="input-group col-sm-6">
+                                    <input type="datetime-local" class="form-control" id="" name="" required>
+                                </div>
+                            </div>
+                        
+
+                            <div class="form-group row">
+                                <label for="input" class="col-sm-2 col-form-label">Thời gian kết thúc</label>
+                                <div class="input-group col-sm-6">
+                                    <input type="datetime-local" class="form-control" id="" name="" required>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group row">
+                                <label class="col-sm-7 col-form-label"></label>
+                                <div class="col-sm-4">
+                            <button type="submit" name="submit" class="btn" id="btn-bg">Gửi thông tin yêu cầu bán đấu
+                            giá</button></div>
+                        </div>
                     </div>
+                    
+                    
+
                 </div>
 
 
             </form>
         </div>
     </div>
-
-
-    <div class="container bg-inf">
-        <p style="color: #fff;"><i class="fa fa-map-marker" style="margin-right: 20px;" aria-hidden="true">
-        </i>Nam Kì Khởi Nghĩa , Thành Phố Đà Nẵng Việt Nam </p>
-        <p style="color: #fff;"><i class="fa fa-envelope" style="margin-right: 10px;"
-                aria-hidden="true"></i>codedream@gmail.com</p>
-        <p style="color: #fff;"><i class="fa fa-phone-alt" style="margin-right: 10px;" aria-hidden="true"></i>+84 987
-            654 321
-            <br>
-            <i style="margin-right: 25px;"></i>+84 123 456 789
-        </p>
-    </div>
     <!-- Contact -->
 
     <!-- Footer -->
     <footer>
+
 
         <div class="container">
             <!--Bắt Đầu Nội Dung Giới Thiệu-->
@@ -235,8 +396,9 @@
             <div class="noi-dung links">
                 <h2>Đường Dẫn</h2>
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Liên hệ bán hàng</a></li>
+                    <li><a href="Udanhmuc.html">Trang Chủ</a></li>
+                    <li><a href="UDanhMucSanPham.html">Cuộc đấu giá</a></li>
+                    <li><a href="ULienHeBanDauGia.html">Liên hệ bán đấu giá</a></li>
                 </ul>
             </div>
             <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -247,7 +409,7 @@
                     <li>
                         <span><i class="fa fa-map-marker"></i></span>
                         <span>Nam Kì Khởi Nghĩa<br />
-                            , Thành Phố Đà Nẵng<br />
+                            Thành Phố Đà Nẵng<br />
                             Việt Nam</span>
                     </li>
                     <li>
@@ -266,17 +428,138 @@
             </div>
             <!--Kết Thúc Nội Dung Liên Hệ-->
         </div>
-        
+
+
+
+        <!-- Date-time -->
+        <div class="time-part">
+            <i style="margin-right: 4px;" class="far fa-clock"></i>
+            <label id='time'>
+                <script>date_time(); //goi ham
+                </script>
+            </label>
+        </div>
+
+
+        <!-- Back-Top -->
+        <div id="backtop">
+            <i class="fas fa-chevron-circle-up"></i>
+        </div>
+
+
 
     </footer>
     <!-- Footer -->
 
+    <!-- JS Login -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- img -->
+    <script>
+        document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+            const dropZoneElement = inputElement.closest(".drop-zone");
+
+            dropZoneElement.addEventListener("click", (e) => {
+                inputElement.click();
+            });
+
+            inputElement.addEventListener("change", (e) => {
+                if (inputElement.files.length) {
+                    updateThumbnail(dropZoneElement, inputElement.files[0]);
+                }
+            });
+
+            dropZoneElement.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                dropZoneElement.classList.add("drop-zone--over");
+            });
+
+            ["dragleave", "dragend"].forEach((type) => {
+                dropZoneElement.addEventListener(type, (e) => {
+                    dropZoneElement.classList.remove("drop-zone--over");
+                });
+            });
+
+            dropZoneElement.addEventListener("drop", (e) => {
+                e.preventDefault();
+
+                if (e.dataTransfer.files.length) {
+                    inputElement.files = e.dataTransfer.files;
+                    updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+                }
+
+                dropZoneElement.classList.remove("drop-zone--over");
+            });
+        });
+
+
+        function updateThumbnail(dropZoneElement, file) {
+            let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+            // First time - remove the prompt
+            if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+                dropZoneElement.querySelector(".drop-zone__prompt").remove();
+            }
+
+            // First time - there is no thumbnail element, so lets create it
+            if (!thumbnailElement) {
+                thumbnailElement = document.createElement("div");
+                thumbnailElement.classList.add("drop-zone__thumb");
+                dropZoneElement.appendChild(thumbnailElement);
+            }
+
+            thumbnailElement.dataset.label = file.name;
+
+            // Show thumbnail for image files
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+                };
+            } else {
+                thumbnailElement.style.backgroundImage = null;
+            }
+        }
+
+    </script>
+    <!-- BS4 JS -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/header.js"></script>
 
+    <!-- Back-Top -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        });
+
+    </script>
 
 
 </body>

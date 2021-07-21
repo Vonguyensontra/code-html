@@ -106,8 +106,8 @@
                     <div class="col-4 col-login">
                         <button class="btn-login" onclick="document.getElementById('id01').style.display='block'"
                             style="width:auto;"><i class="fas fa-sign-in-alt iconcolor mr-2 "></i>Đăng Nhập</button>
-                        <button class="btn-login" onclick="document.getElementById('id02').style.display='block'"
-                            style="width:auto;"><i class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button>
+                        <a href="DangKi.html"><button class="btn-login" onclick="document.getElementById('id02').style.display='block'"
+                            style="width:auto;"><i class="fas fa-user-plus iconcolor mr-2"></i>Đăng Ký</button></a>
                         <div id="id01" class="modal">
                             <form class="modal-content animate" action="/action_page.php" method="post">
                                 <div class="imgcontainer">
@@ -302,9 +302,8 @@
                         <a href="danhmuc.html" target="">
                             <img src="img/logo.png" alt="" class="logo" /> </a>
                     </div>
-                    <div class="search col-6">
-
-                        <form action="" method="get" class="minisearch ">
+                    <div class="search col-8 row">
+                        <form action="" method="get" class="minisearch col-4 ">
                             <select name="" id="" class="list">
                                 <option value="">Danh Mục Tài Sản</option>
                                 <option value="">Danh Mục Tài Sản</option>
@@ -313,18 +312,23 @@
                                 <option value="">Danh Mục Tài Sản</option>
                             </select>
                         </form>
-                        <div class="form-group input ">
-
-                            <input style="border:none;box-shadow: none !important;background-color: 	#DDDDDD;"
-                                type="text" class="form-control" name="" id="" placeholder="Nhập tên sp">
+                        <div class="form-group input col-6">
+                            <input class="thetrong" style="height: 40px;border:none;box-shadow: none !important;background-color: 	#DDDDDD;"
+                            type="text" class="form-control" name="" id="" placeholder="Nhập tên sp">
                         </div>
-                        <div class="iconsearch">
-                            <a href=""><i class="fas fa-search"></i></a>
+                        <div class="col-2" style="margin-left: -10px;">
+                            <div class="iconsearch ">
+                          
+                                <a  href=""><i class="fas fa-search"></i></a>
+                           
+                            </div>
                         </div>
+                       
 
                     </div>
 
                 </div>
+                <!-- Menu Danh mục - Trang chủ - Đấu giá - Liên hệ bán -->
                 <div class="bgmenubar sticky" style="z-index: 0;">
                     <div class="menubar">
                         <div class="dropdown">
@@ -376,9 +380,18 @@
 
                     </div>
                 </div>
+                
+                <div class="row row-link">
+                    <ol class="breadcrumb">
+                        <li><a href="danhmuc.html">Trang chủ / </a></li>
+                        <li class="active-link"> Liên hệ bán đấu giá</li>
+                    </ol>               
+                </div>
             </div>
-            <div style="height: 300px;"></div>
+
+
         </div>
+        
 
     </header>
     <!-- Header -->
@@ -478,7 +491,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="input" class="col-sm-2 col-form-label">Tình trạng</label>
                             <div class="col-sm-6">
                                 <select class="form-control" name="" id="" required>
@@ -486,7 +499,7 @@
                                     <option>Đã qua sử dụng</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="input" class="col-sm-2 col-form-label">Giá khởi điểm</label>

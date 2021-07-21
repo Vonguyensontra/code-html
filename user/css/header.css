@@ -450,6 +450,13 @@ footer .container .noi-dung.about p{
 header{
     position: relative;
 }
+.thetrong{
+    height: 10px;
+    border: none !important;
+    outline:none !important;
+    background-color: #DDDDDD;
+    
+}
 .bgmenubar{
     width: 80%;
     position:absolute;
