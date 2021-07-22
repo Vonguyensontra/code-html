@@ -538,11 +538,10 @@ header{
   }
   .buttonslide{
       position: absolute;
-      top: 110%;
-      left: 35%;
+      top: 100%;
+      left: 36%;
      
-      width: 30%;
-      height: 30%;
+  
   }
   .buttonslide  a{
       width: 50%;
@@ -560,6 +559,7 @@ header{
       font-size: 1rem;
       outline: none;
   }
+
   .btn123 a{
     text-decoration: none !important;
   }
@@ -571,6 +571,7 @@ header{
   .btn123:hover a{
     color: white !important;
   }
+ 
   /* khuc nay */
 /*   
 .btn123{
@@ -693,10 +694,11 @@ header{
     display: none;
 }
 .badot{
+    
     position: absolute;
     margin: auto;
-    left: 720px;
-    top: 750px;
+    left: 47%;
+    top: 145%;
     z-index: 3;
 }
 
